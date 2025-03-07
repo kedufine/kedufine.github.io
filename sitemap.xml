@@ -1,67 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://keris.dscloud.me/index.html</loc>
-         <lastmod>2025-03-05</lastmod>
+         <loc>https://kedufine.github.io/index.html</loc>
+         <lastmod>2025-03-07</lastmod>
     </url>
     <url>
-         <loc>https://keris.dscloud.me/home01.html</loc>
-         <lastmod>2025-03-05</lastmod>
+         <loc>https://kedufine.github.io/%EC%9E%90%EC%A3%BC%EB%AC%BB%EB%8A%94%EC%A7%88%EB%AC%B8_%EA%B3%BC%EC%A0%9C.html</loc>
+         <lastmod>2025-03-07</lastmod>
     </url>
     <url>
-         <loc>https://keris.dscloud.me/home02.html</loc>
-         <lastmod>2025-03-05</lastmod>
+         <loc>https://kedufine.github.io/%EC%9E%90%EC%A3%BC%EB%AC%BB%EB%8A%94%EC%A7%88%EB%AC%B8_%EB%AC%B8%EC%84%9C.html</loc>
+         <lastmod>2025-03-07</lastmod>
     </url>
     <url>
-         <loc>https://keris.dscloud.me/home03.html</loc>
-         <lastmod>2025-03-05</lastmod>
+         <loc>https://kedufine.github.io/%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%EA%B0%9C%EC%84%A0_2025.html</loc>
+         <lastmod>2025-03-07</lastmod>
     </url>
     <url>
-         <loc>https://keris.dscloud.me/aggregate/aggregate01.html</loc>
-         <lastmod>2025-03-05</lastmod>
+         <loc>https://kedufine.github.io/%EA%B3%BC%EC%A0%9C%EA%B4%80%EB%A6%AC/sub01.html</loc>
+         <lastmod>2025-03-07</lastmod>
     </url>
     <url>
-         <loc>https://keris.dscloud.me/document/docu01.html</loc>
-         <lastmod>2025-03-05</lastmod>
+         <loc>https://kedufine.github.io/%EA%B8%B0%EB%A1%9D%EB%AC%BC%EC%9D%B4%EA%B4%80/transfer01.html</loc>
+         <lastmod>2025-03-07</lastmod>
     </url>
     <url>
-         <loc>https://keris.dscloud.me/document/docu02.html</loc>
-         <lastmod>2025-03-05</lastmod>
+         <loc>https://kedufine.github.io/%EB%82%B4%EB%B6%80%EB%A9%94%EC%9D%BC/mail01.html</loc>
+         <lastmod>2025-03-07</lastmod>
     </url>
     <url>
-         <loc>https://keris.dscloud.me/handover/handover01.html</loc>
-         <lastmod>2025-03-05</lastmod>
+         <loc>https://kedufine.github.io/%EB%A9%94%EB%AA%A8%EA%B4%80%EB%A6%AC/memo01.html</loc>
+         <lastmod>2025-03-07</lastmod>
     </url>
     <url>
-         <loc>https://keris.dscloud.me/mail/mail01.html</loc>
-         <lastmod>2025-03-05</lastmod>
-    </url>
-    <url>
-         <loc>https://keris.dscloud.me/mail/mail02.html</loc>
-         <lastmod>2025-03-05</lastmod>
-    </url>
-    <url>
-         <loc>https://keris.dscloud.me/mail/mail03.html</loc>
-         <lastmod>2025-03-05</lastmod>
-    </url>
-    <url>
-         <loc>https://keris.dscloud.me/memo/memo01.html</loc>
-         <lastmod>2025-03-05</lastmod>
-    </url>
-    <url>
-         <loc>https://keris.dscloud.me/schedule/sche01.html</loc>
-         <lastmod>2025-03-05</lastmod>
-    </url>
-    <url>
-         <loc>https://keris.dscloud.me/support/support01.html</loc>
-         <lastmod>2025-03-05</lastmod>
-    </url>
-    <url>
-         <loc>https://keris.dscloud.me/task/task01.html</loc>
-         <lastmod>2025-03-05</lastmod>
-    </url>
-    <url>
-         <loc>https://keris.dscloud.me/transfer/transfer01.html</loc>
-         <lastmod>2025-03-05</lastmod>
+         <loc>https://kedufine.github.io/%EB%AC%B8%EC%84%9C%EA%B4%80%EB%A6%AC/docu01.html</loc>
+         <lastmod>2025-03-07</lastmod>
     </url>
 </urlset>
