@@ -867,6 +867,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#5-27" class="md-nav__link">
+    <span class="md-ellipsis">
+      5월 27일
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#4-22" class="md-nav__link">
     <span class="md-ellipsis">
       4월 22일
@@ -1242,6 +1251,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#5-27" class="md-nav__link">
+    <span class="md-ellipsis">
+      5월 27일
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#4-22" class="md-nav__link">
     <span class="md-ellipsis">
       4월 22일
@@ -1336,6 +1354,112 @@
 
 <h1 id="2025">2025년 기능개선 내역</h1>
 <p>업무관리 기능개선 사항을 배포일자별로 세부내역을 제공합니다. 오류수정 등은 포함하지 않습니다.</p>
+<h2 id="5-27">5월 27일</h2>
+<details class="success">
+<summary>문서환경설정 개인정보필터 사용안함 설정 추가</summary>
+<ul>
+<li>서버 간 장애 발생 시 즉시 전환할 수 있도록 개인정보필터 사용·미사용 선택 옵션 제공</li>
+<li>관리자·사용자가 문서환경설정에서 손쉽게 개인정보필터 상태를 변경하도록 UI 개선</li>
+</ul>
+</details>
+<details class="success">
+<summary>개인정보필터 처리결과 결재단계 팝업 안내</summary>
+<ul>
+<li>개인정보필터 자동, 자동(발송문서) 적용 시 DB 처리결과를 다음 결재 처리 시 팝업으로 안내</li>
+<li>전결 단계에서 필터 적용 이력 확인으로 처리 지연 및 오류 재발 최소화</li>
+</ul>
+</details>
+<details class="success">
+<summary>외부공문재발송 재발송요청 다건처리 기능 추가</summary>
+<ul>
+<li>외부공문대기 화면의 ‘재발송요청’을 다건 선택 후 일괄 처리 가능</li>
+<li>반복 요청 감소로 외부공문 처리 시 업무 효율 향상</li>
+</ul>
+</details>
+<details class="success">
+<summary>외부공문처리현황의 수신처목록 팝업에서 처리자 정보 표기</summary>
+<ul>
+<li>외부공문처리현황 수신처목록 팝업에 처리자(외부공문관리담당자) 이름(ID) 추가 표시</li>
+<li>처리자 확인 및 이력 추적 편의성 강화</li>
+</ul>
+</details>
+<details class="success">
+<summary>외부공문게시 요청 건수 통계 항목 추가</summary>
+<ul>
+<li>외부공문관리통계현황에 ‘공문게시 요청 건수(외부공문총괄관리자)’ 항목 신설</li>
+<li>게시 요청 현황을 한눈에 파악하여 관리 효율 개선</li>
+</ul>
+</details>
+<details class="success">
+<summary>외부공문처리현황 공문처리 목록 조회기능 추가</summary>
+<ul>
+<li>공문처리 목록 전용 조회조건 및 목록 화면 제공</li>
+<li>공문별 처리 상태와 완료 여부를 신속하게 확인</li>
+</ul>
+</details>
+<details class="success">
+<summary>외부공문대기 ‘수신일시’ 조회조건 추가</summary>
+<ul>
+<li>외부공문대기 상단에 ‘수신일시’ 조건 신설로 기간별 대기 공문 선별 정확도 향상</li>
+</ul>
+</details>
+<details class="success">
+<summary>접수대기 일괄접수 ‘나의결재선’ 사용 지원</summary>
+<ul>
+<li>일괄접수 시 ‘나의결재선’ 선택 기능 제공으로 결재선 재설정 단계 생략</li>
+<li>접수 처리 속도 및 사용자 편의성 향상</li>
+</ul>
+</details>
+<details class="success">
+<summary>접수대기 일괄접수 진행순번 시각화</summary>
+<ul>
+<li>일괄접수 진행 중 처리중 이미지에 처리순번(예: 5개의 문서중 1번째) 안내 표시</li>
+<li>다건 접수 진행 상황 실시간 가시화</li>
+</ul>
+</details>
+<details class="success">
+<summary>공개제한기간 만료 시 직원열람제한 설정안함 변경</summary>
+<ul>
+<li>부분공개·비공개(5호) 문서가 공개제한기간 경과로 ‘공개’ 전환될 때 직원열람제한을 자동 ‘설정안함’으로 변경</li>
+<li>직원열람제한 동기화로 사용자 혼선 방지</li>
+</ul>
+</details>
+<details class="success">
+<summary>부분공개의 직원열람제한에 따른 문서 열람제한 안내 연동</summary>
+<ul>
+<li>부분공개 문서의 직원열람제한(지정날짜까지·영구) 설정 값을 정보공개포털 본문 열람제한 안내와 연계</li>
+<li>정보공개포털 열람제한 사항 사전 고지 강화</li>
+</ul>
+</details>
+<details class="success">
+<summary>공개 문서 직원열람범위, 직원열람제한 UI 단순화</summary>
+<ul>
+<li>대국민공개여부 ‘공개’ 선택 시 직원열람범위는 '기관', 직원열람제한은 ‘설정안함’만 활성화</li>
+<li>설정 오류 방지 및 열람범위 설정 간소화</li>
+</ul>
+</details>
+<details class="success">
+<summary>교육데이터통합 연계기안 ACK 전송 기능 추가</summary>
+<ul>
+<li>교육데이터통합 연계기안 발송·업무담당자 처리 시 ACK 전송 기능 추가</li>
+<li>연계 시스템 간 상태 동기화로 프로세스 투명성 강화</li>
+</ul>
+</details>
+<details class="success">
+<summary>메인 포틀릿 메일함 ‘수신메일함’ 연결</summary>
+<ul>
+<li>메인 포틀릿 메일함을 ‘미확인수신메일함’에서 ‘수신메일함’으로 변경</li>
+<li>확인 여부와 관계없이 수신 메일 목록 즉시 조회 가능</li>
+</ul>
+</details>
+<details class="success">
+<summary>대용량 html 첨부파일 이관 전 다운로드 기능 추가</summary>
+<ul>
+<li>권한별 html 첨부파일 미리보기·선택 다운로드 지원으로 용량 예측 가능</li>
+<li>기록물이관 ‘수집’ 전 단계에서 대용량 첨부파일 다운로드 체크 로직 실행</li>
+<li>WAS 용량 증가 및 시도별 트래픽 속도 영향 안내</li>
+</ul>
+</details>
 <h2 id="4-22">4월 22일</h2>
 <details class="success">
 <summary>문서등록대장 첨부파일명 마스킹 기능 추가</summary>
