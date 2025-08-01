@@ -25,7 +25,8 @@ K-에듀파인 업무관리는 17개 시·도교육청과 산하기관, 1만 2�
 
 - [사이트 접속]
 - '<> Code' 버튼 → Download ZIP 클릭
-- 압축 해제 후 index.html 실행
+- 압축 해제 후 index.html 실행하면 인터넷이 되지 않은 경우에도 실행 가능
+- docs 폴더 하위에 *.md 파일 위치하여 **AI 챗봇에 업로드하여 활용 가능**
 
   [사이트 접속]: https://github.com/kedufine/kedufine.github.io
 
