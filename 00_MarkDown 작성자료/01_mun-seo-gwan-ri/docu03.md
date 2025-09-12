@@ -1,7 +1,7 @@
 ---
 title: 수신자숨김
 #subtitle: 
-description: 수신자숨김 처리하는 방법을 안내
+description: 문서등록대장에서 수신자숨김 처리하는 방법을 안내
 author: KERIS 김권수 선임연구원
 ---
 
