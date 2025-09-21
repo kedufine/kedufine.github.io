@@ -9,3 +9,9 @@
 .heart {
   animation: heart 1000ms infinite;
 }
+
+.copy-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+}
