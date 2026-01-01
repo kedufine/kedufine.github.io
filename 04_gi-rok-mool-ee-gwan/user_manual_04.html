@@ -2068,7 +2068,7 @@
 <p><strong>기록관환경설정</strong> 화면은 시도기록물담당자가 기록물 이관 업무 전체에 영향을 미치는 핵심 환경을 설정하는 공간입니다.
 이 화면에서는 이관 파일의 저장 용량, 서버 정보, 폐지 조직 관리, 각종 배치 실행 시간 등 이관 업무의 기반이 되는 중요한 설정들을 관리합니다.
 이 설정은 전체 이관 프로세스의 안정성과 효율성을 보장하는 첫 단계입니다.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:7"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><input id="__tabbed_1_7" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">용량설정</label><label for="__tabbed_1_2">서버설정</label><label for="__tabbed_1_3">폐지조직관리</label><label for="__tabbed_1_4">폐기환경설정</label><label for="__tabbed_1_5">비전자기록물소급일자등록</label><label for="__tabbed_1_6">이관배치시간설정</label><label for="__tabbed_1_7">대용량별송파일설정</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:6"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">용량설정</label><label for="__tabbed_1_2">서버설정</label><label for="__tabbed_1_3">폐지조직관리</label><label for="__tabbed_1_4">비전자기록물소급일자등록</label><label for="__tabbed_1_5">이관배치시간설정</label><label for="__tabbed_1_6">대용량별송파일설정</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>이관 파일을 생성하고 저장하는 공간(디렉토리)의 총용량을 설정하여, 스토리지 부족 현상이 발생하지 않도록 관리하는 기능입니다.</p>
@@ -2109,30 +2109,29 @@
 </ul>
 </div>
 <div class="tabbed-block">
-<p>이관이 완료된 기록물을 폐기하는 배치 프로그램의 실행 시간과 하루에 처리할 수 있는 최대 부서(처리과) 수를 설정하는 기능입니다.
-폐기 배치 실행 시간과 일일 최대 폐기 가능 처리과 수를 입력한 후 저장 버튼을 클릭합니다.</p>
-<div class="admonition warning">
-<p class="admonition-title">설정 제약사항</p>
-<ul>
-<li>배치 실행 시작 시간은 <strong>18:00 ~ 23:59</strong>, 종료 시간은 <strong>01:00 ~ 05:00</strong> 사이로만 입력 가능</li>
-<li>하루에 폐기 가능한 최대 처리과 수는 <strong>30개</strong>로 제한됨</li>
-</ul>
-</div>
-</div>
-<div class="tabbed-block">
 <p>전년도에 생산되었어야 할 비전자 문서를 현재 연도에 등록할 수 있도록 허용하는 마감일(소급 일자)을 지정하는 기능입니다.
 비전자 기록물의 소급 일자를 입력하고 저장 버튼 클릭합니다.</p>
 </div>
 <div class="tabbed-block">
 <p>기록물 이관 파일을 생성하는 배치 프로그램의 실행 시간을 설정하는 기능입니다.
-만약 시작 시간이 종료 시간보다 나중 시간일 경우(예: 시작 22:00, 종료 04:00), 배치는 다음 날의 종료 시간까지 실행됩니다.</p>
+만약 시작 시간이 종료 시간보다 나중 시간일 경우(예: 시작 22:00, 종료 04:00), 배치는 다음 날의 종료 시간까지 실행됩니다.
+병렬처리 사용 시 기록물이관 파일을 동시에 생성하여 처리 속도가 향상됩니다.</p>
 <details class="tip">
 <summary>이관배치시간설정 업무 절차</summary>
 <ol>
 <li>배치 시간 설정 사용 여부 선택 (미사용 선택 시 24시간 실행)</li>
-<li>사용으로 선택 시 배치 실행 시작 및 종료 시간 설정</li>
+<li>시간 설정 사용으로 선택 시 배치 실행 시작 및 종료 시간 설정</li>
+<li>병렬처리 사용 여부 선택</li>
+<li>병렬처리 사용으로 선택 시 스레드 수와 청크 크기 설정 (배치실행시간은 업무시간 이외 <strong>18시 ~ 익일 7시</strong> 사이로 설정 가능)</li>
 <li>저장 버튼을 클릭하여 저장함</li>
 </ol>
+</details>
+<details class="info">
+<summary>기록물이관 파일생성 병렬처리 항목 세부설명</summary>
+<ul>
+<li>스레드(Thread) 수 : 병렬로 작업을 수행하는 작업자 수 (값이 클수록 처리 속도가 증가하지만 서버 자원 사용량도 함께 증가)</li>
+<li>청크(Chunk) 크기 : 한 번에 묶어서 처리하는 작업 단위 (크기가 클수록 안정적일 수 있으나 처리 속도가 느려질 수 있음)</li>
+</ul>
 </details>
 </div>
 <div class="tabbed-block">
