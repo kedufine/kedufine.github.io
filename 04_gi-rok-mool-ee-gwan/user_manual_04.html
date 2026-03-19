@@ -9,7 +9,7 @@
         <meta name="description" content="K-에듀파인에서 기록물이관 업무에 대한 사용자교육자료">
       
       
-        <meta name="author" content="KERIS 김권수 선임연구원, 이진호 연구원, 사업단 김성민 과장, 김영인 주임">
+        <meta name="author" content="한국교육학술정보원(KERIS)">
       
       
       
@@ -1769,7 +1769,6 @@
 <li>기간 설정 : 기록 기록물 이관 일정 설정</li>
 <li>기록물 정리 : 기록물 이관을 하기 위하여 기록물 정리</li>
 <li>기록물 정리현황 : 기록물 정리 상태 조회</li>
-<li>대용량 별송파일 다운 : 대용량 별송파일(HTML 링크파일 실물) 다운로드 및 교체</li>
 <li>이관 실행현황 : 정리된 기록물의 이관 요청을 승인하고 이관 실행</li>
 <li>처리과별 실적 건수 : 정리된 기록물 실적 건수 조회</li>
 <li>기록물 생산 현황 통계 : 기록물 이관 생산기록물 현황 조회</li>
@@ -2012,30 +2011,7 @@
 <li>승인취소: 승인된 부서의 이관을 취소해야 할 경우 사용. 승인취소된 부서는 이관초기화를 먼저 진행한 후 다시 이관 요청</li>
 <li>이관초기화: 파일 생성 중 실패가 발생하거나 RMS에서 오류가 발생했을 때 사용. 오류를 수정한 후 이관 상태를 초기화하여 재진행 가능</li>
 <li>인수완료요청: RMS에서는 인수가 완료되었으나 K-에듀파인 시스템이 상태 변경 신호를 제대로 받지 못해 파일생성 또는 접수 상태에 머물러 있을 때 사용하는 <strong>수동 완료 기능</strong>. RMS에서 인수가 완료된 것을 확인한 후 이 버튼을 클릭하면 상태가 <strong>인수</strong>로 변경되고 관련 작업 파일이 삭제됨</li>
-<li>상세 현황 조회: 이관 과정에서 발생한 실패, 오류, 반송된 기록물의 상세 내역을 팝업으로 조회할 수 있음</li>
-</ul>
-</div>
-</li>
-<li>
-<p>대용량 별송파일 다운로드</p>
-<p>이 기능은 대용량 별송파일 목록(HTML 링크)을 일괄적으로 수집하고, 수집정보 대상으로 실물인 대용량 별송파일을 다운로드하여, 기존 HTML 링크파일과 대체하기 위해 새롭게 추가된 기능입니다.
-이 작업은 <strong>시도기록물담당자</strong>만 수행할 수 있습니다.</p>
-<details class="tip">
-<summary>대용량 별송파일 처리 업무 절차</summary>
-<ol>
-<li>팝업 열기: 이관할 생산년도를 선택하고 대용량별송다운 버튼 클릭</li>
-<li>파일 수집: 팝업창에서 파일 수집 버튼을 클릭하여 해당 연도의 별송파일 목록 수집. 배치를 통해 작업이 진행되며, 완료 시 수집 상태와 일시가 표시됨</li>
-<li>파일 다운로드: 수집이 완료되면 파일 다운로드 버튼을 클릭하여 실제 파일들 다운로드. 이 과정 역시 배치를 통해 진행됨</li>
-<li>파일 대체: 다운로드가 완료되면 파일 대체 버튼을 클릭하여 다운로드된 파일로 기존 파일을 대체하는 작업 실행. 대체 작업까지 완료되어야 이관 실행 가능</li>
-<li>상태 확인: 각 단계(수집, 다운로드, 대체)의 진행 상태와 파일의 총용량, 처리 건수를 팝업창에서 확인할 수 있음</li>
-</ol>
-</details>
-<div class="admonition warning">
-<p class="admonition-title">대용량 별송파일 처리시 핵심 제약사항 및 사전 설정</p>
-<ul>
-<li>사전 설정 필수: 이 기능을 사용하려면 <strong>기록관환경설정 &gt; 대용량별송파일설정</strong> 메뉴에서 반드시 사전 설정이 완료되어야 함. 해당 메뉴에서 배치 실행 시간을 설정하고, 기능을 사용할 연도를 추가하여 사용으로 설정</li>
-<li>이관 실행 차단: 대용량별송파일설정에서 특정 연도가 <strong>사용</strong>으로 설정된 상태에서는 파일 대체 작업이 완료될 때까지 해당 연도의 <strong>이관실행 불가능</strong></li>
-<li>연도별 단독 실행: 한 번에 하나의 연도만 이 기능을 사용할 수 있으며, 특정 연도의 작업이 진행 중일 경우, 다른 연도의 대용량 별송파일 기능은 사용 불가능</li>
+<li>상세 현황 조회: 이관 과정에서 발생한 실패, 오류, 반송된 기록물의 상세 내역을 팝업으로 조회할 수 있음   </li>
 </ul>
 </div>
 </li>
@@ -2068,7 +2044,7 @@
 <p><strong>기록관환경설정</strong> 화면은 시도기록물담당자가 기록물 이관 업무 전체에 영향을 미치는 핵심 환경을 설정하는 공간입니다.
 이 화면에서는 이관 파일의 저장 용량, 서버 정보, 폐지 조직 관리, 각종 배치 실행 시간 등 이관 업무의 기반이 되는 중요한 설정들을 관리합니다.
 이 설정은 전체 이관 프로세스의 안정성과 효율성을 보장하는 첫 단계입니다.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:6"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">용량설정</label><label for="__tabbed_1_2">서버설정</label><label for="__tabbed_1_3">폐지조직관리</label><label for="__tabbed_1_4">비전자기록물소급일자등록</label><label for="__tabbed_1_5">이관배치시간설정</label><label for="__tabbed_1_6">대용량별송파일설정</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">용량설정</label><label for="__tabbed_1_2">서버설정</label><label for="__tabbed_1_3">폐지조직관리</label><label for="__tabbed_1_4">비전자기록물소급일자등록</label><label for="__tabbed_1_5">이관배치시간설정</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>이관 파일을 생성하고 저장하는 공간(디렉토리)의 총용량을 설정하여, 스토리지 부족 현상이 발생하지 않도록 관리하는 기능입니다.</p>
@@ -2132,20 +2108,6 @@
 <li>스레드(Thread) 수 : 병렬로 작업을 수행하는 작업자 수 (값이 클수록 처리 속도가 증가하지만 서버 자원 사용량도 함께 증가)</li>
 <li>청크(Chunk) 크기 : 한 번에 묶어서 처리하는 작업 단위 (크기가 클수록 안정적일 수 있으나 처리 속도가 느려질 수 있음)</li>
 </ul>
-</details>
-</div>
-<div class="tabbed-block">
-<p>대용량 별송파일 다운로드 기능의 배치 실행 시간을 설정하고, 연도별로 이 기능을 사용할지 여부를 관리하는 기능입니다.
-특정 연도에 대해 대용량 별송파일 기능이 이미 실행 중이거나 완료된 경우, 해당 연도의 설정을 미사용으로 변경하거나 목록에서 삭제할 수 없습니다.
-배치 실행 시간은 이관배치시간설정과 마찬가지로 시작 시간이 종료 시간보다 나중일 경우 다음 날 종료 시간까지 실행됩니다.</p>
-<details class="tip">
-<summary>대용량별송파일설정 업무 절차</summary>
-<ol>
-<li>배치 실행 시작 시간과 종료 시간 설정</li>
-<li>추가/삭제 버튼을 이용해 관리할 연도를 추가하거나 삭제함</li>
-<li>연도별로 기능 사용 여부 설정</li>
-<li>저장 버튼을 클릭하여 설정을 최종 저장</li>
-</ol>
 </details>
 </div>
 </div>
@@ -2367,8 +2329,7 @@
 <dt><code>시도기록물담당자</code></dt>
 <dd>기록물 이관 업무의 전체적인 환경을 설정하고 관리하는 최상위 권한.
 이관 파일의 저장 용량 설정, 서버 정보 설정, 폐지 조직 관리, 이관 기간 설정 등이 주요 업무.
-또한, K-에듀파인과 기록관리시스템(RMS) 간의 기능 분류 체계를 일치시키는 데이터 전송 작업을 수행.
-신규 기능인 대용량 별송파일 다운로드 관련 설정 및 실행 권한을 보유</dd>
+또한, K-에듀파인과 기록관리시스템(RMS) 간의 기능 분류 체계를 일치시키는 데이터 전송 작업을 수행.</dd>
 <dt><code>기관기록물담당자</code></dt>
 <dd>소속 기관(본청, 지원청) 및 하위 부서(학교)들의 기록물 이관 업무를 총괄하는 중간 관리자 권한.
 부서에서 요청한 기록물 이관을 최종 승인하고 기록관리시스템(RMS)으로 이관을 실행하는 핵심 역할을 수행.

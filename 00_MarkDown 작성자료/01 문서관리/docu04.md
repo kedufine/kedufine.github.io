@@ -1,8 +1,6 @@
 ---
 title: 개인정보필터
-#subtitle: 
 description: 기안기에서 동작하는 개인정보필터 사용방법 안내
-author: KERIS 김권수 선임연구원
 ---
 
 #개인정보필터

@@ -1,8 +1,6 @@
 ---
 title: 마스킹
-#subtitle: 
 description: 문서제목 및 첨부파일명에서 개인정보, 민감정보 등 마스킹 하는 방법 안내
-author: KERIS 김권수 선임연구원
 ---
 
 #마스킹

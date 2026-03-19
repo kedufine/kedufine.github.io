@@ -1,9 +1,6 @@
 ---
 title: 내부메일
-#subtitle: 
 description: K-에듀파인 업무관리의 내부메일 업무에 대한 주요 사용자 질의사항
-#icon: material/mail
-#status: new
 ---
 
 #내부메일 자주묻는 질문

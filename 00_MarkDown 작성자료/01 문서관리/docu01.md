@@ -1,8 +1,6 @@
 ---
 title: 문서등록대장(다년도검색)
-#subtitle: 
 description: 문서등록대장(다년도검색) 기능 안내
-author: KERIS 김권수 선임연구원
 ---
 
 #문서등록대장(다년도검색)

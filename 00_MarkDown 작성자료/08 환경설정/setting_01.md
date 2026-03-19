@@ -1,8 +1,6 @@
 ---
 title: 문서관리카드 UI유형
-#subtitle: 
 description: 문서관리카드 UI유형 3종을 소개합니다.
-author: KERIS 김권수 선임연구원
 ---
 
 # 문서관리카드 UI유형
