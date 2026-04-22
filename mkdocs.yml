@@ -1,0 +1,182 @@
+site_name: "업무관리 사용자교육자료"
+site_description: "K-에듀파인 업무관리 사용자교육자료"
+site_author: "한국교육학술정보원(KERIS)"
+
+nav:
+  - 홈:
+    - index.md
+    - 자주묻는 질문:
+      - 01_mun-seo-gwan-ri/qna_01.md
+      - 02_gwah-jeh-gwan-ri/qna_02.md
+      - 02_gwah-jeh-gwan-ri/qna_03.md
+      - 03_memo-gwan-ri/qna_04.md
+      - 04_gi-rok-mool-ee-gwan/qna_05.md
+      - 05_eob-mu-ji-won/qna_06.md
+      - 06_il-jung-gwan-ri/qna_08.md
+      - 07_mail/qna_09.md
+    - 문서관리 기능개선:
+      - dev_2026.md
+      - dev_2025.md
+    - 과제관리 등 기능개선:
+      - dev_etc_2026.md
+      - dev_etc_2025.md
+  - 문서관리:
+    - 01_mun-seo-gwan-ri/docu01.md
+    - 개인정보 보호기능:
+      - 01_mun-seo-gwan-ri/docu02.md
+      - 01_mun-seo-gwan-ri/docu03.md
+      - 01_mun-seo-gwan-ri/docu04.md
+    - 사용자 교육자료:
+      - 01_mun-seo-gwan-ri/user_manual_01.md
+  - 과제관리:
+    - 사용자 교육자료:
+      - 02_gwah-jeh-gwan-ri/handover01.md
+      - 02_gwah-jeh-gwan-ri/user_manual_02.md
+  - 메모관리:
+    - 03_memo-gwan-ri/memo01.md
+    - 사용자 교육자료:
+      - 03_memo-gwan-ri/user_manual_03.md
+  - 기록물이관:
+    - 사용자 교육자료:
+      - 04_gi-rok-mool-ee-gwan/user_manual_04.md
+  - 업무지원:
+    - 사용자 교육자료:
+      - 05_eob-mu-ji-won/user_manual_05.md
+  - 일정관리:
+    - 사용자 교육자료:
+      - 06_il-jung-gwan-ri/user_manual_06.md
+  - 내부메일:
+    - 사용자 교육자료:
+      - 07_mail/user_manual_07.md
+  - 환경설정:
+    - 08_settings/setting_01.md
+    - 사용자 교육자료:
+      - 08_settings/user_manual_08.md
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: "ko"
+  logo_dark_mode: "images/logo_black.gif"
+  logo_light_mode: "images/logo_light.gif"
+  favicon: "images/favicon.png"
+  palette:
+    - scheme: default
+      primary: white
+      accent: gray
+      toggle:
+        icon: material/brightness-7
+        name: light mode
+    - scheme: slate
+      primary: grey
+      accent: white
+      toggle:
+        icon: material/brightness-4
+        name: dark mode
+  font:
+    text: "Noto Sans KR"
+    code: "Fira Code"
+  features:
+    - announce.dismiss
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - content.tabs.link
+    - content.action.edit
+    - content.tooltips
+    - header.autohide
+    - navigation.indexes
+    - navigation.expand
+    - navigation.footer
+    - navigation.instant
+    - navigation.sections
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.path
+    - navigation.prune
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    - content.footnote.tooltips
+
+plugins:
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - autorefs
+  - mkdocstrings
+  - offline
+
+extra:
+  social:
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@k-9948
+  analytics:
+    provider: google
+    property: G-SK0VKM1QZ8  # Google Analytics ID 추가
+    feedback:
+      title: "이 페이지가 도움이 되었나요?"
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: "도움이 되었습니다"
+          data: 1
+          note: "감사합니다!"
+        - icon: material/emoticon-sad-outline
+          name: "개선이 필요합니다"
+          data: 0
+          note: "개선사항을 사용자지원서비스에 올려주세요."
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - https://unpkg.com/lunr/lunr.js
+  - https://unpkg.com/lunr-languages/lunr.stemmer.support.js
+  - https://unpkg.com/lunr-languages/tinyseg.js
+  - https://unpkg.com/lunr-languages/lunr.ko.js
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - javascripts/tablesort.js
+  - javascripts/copy.js
+ 
+markdown_extensions:
+  - def_list
+  - pymdownx.critic
+  - pymdownx.mark
+  - pymdownx.betterem
+  - attr_list  # 이미지 크기 조정, 아이콘 설정
+  - md_in_html  # HTML과 Markdown 혼용
+  - admonition  # 주의/경고 박스
+  - pymdownx.highlight  # 코드 하이라이팅
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true  # 탭 UI 추가
+  - pymdownx.tasklist:
+      custom_checkbox: true  # 체크리스트
+  - pymdownx.tilde  # 취소선 지원
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.keys  # 키보드 입력 스타일 적용
+  - pymdownx.smartsymbols  # 수학 기호 변환
+  - pymdownx.caret  # 위 첨자 지원
+  - pymdownx.details  # 접을 수 있는 박스 추가
+  - pymdownx.snippets:
+      auto_append:
+        - includes/mkdocs.md  # 공통 포함 파일 추가
+  - footnotes
+  - abbr
+
+validation:
+  absolute_links: warn
+  unrecognized_links: warn
+  not_found: info
+
+copyright:
+  © K-에듀파인 중앙상담센터 1566-0066, 교육청 상담센터 1600-0755
