@@ -1,11 +1,25 @@
+/* ==========================================================================
+   K-에듀파인 업무관리 사용자교육자료 - Stripe / Vercel Docs Custom Stylesheet
+   ========================================================================== */
+
+/* Pretendard 웹폰트 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.min.css");
+
 @keyframes heart {
-  0%, 40%, 80%, 100% {
+
+  0%,
+  40%,
+  80%,
+  100% {
     transform: scale(1);
   }
-  20%, 60% {
+
+  20%,
+  60% {
     transform: scale(1.15);
   }
 }
+
 .heart {
   animation: heart 1000ms infinite;
 }
@@ -14,4 +28,696 @@
   position: absolute;
   top: 6px;
   right: 6px;
+}
+
+/* ==========================================================================
+   1. Design Tokens (Stripe / Vercel Docs Clean Palette)
+   ========================================================================== */
+
+/* 라이트 모드 (Vercel Light) */
+[data-md-color-scheme="default"] {
+  --md-default-bg-color: #ffffff;
+  --md-default-fg-color: #111111;
+  --md-default-fg-color--light: #666666;
+  --md-default-fg-color--lighter: #888888;
+  --md-default-fg-color--lightest: #fafafa;
+
+  --md-primary-fg-color: #000000;
+  --md-primary-bg-color: #ffffff;
+  --md-accent-fg-color: #6366f1;
+
+  --md-typeset-a-color: #6366f1;
+  --md-code-bg-color: #fafafa;
+  --md-code-fg-color: #111111;
+
+  --md-typeset-mark-color: #fef08a;
+  --md-typeset-del-color: #fee2e2;
+  --md-typeset-ins-color: #dcfce7;
+
+  --md-footer-bg-color: #ffffff;
+  --md-footer-bg-color--dark: #fafafa;
+  --md-footer-fg-color: #111111;
+  --md-footer-fg-color--light: #666666;
+  --md-footer-fg-color--lighter: #888888;
+
+  --oa-border: #eaeaea;
+  --oa-border-subtle: #f3f3f3;
+  --oa-surface: #fafafa;
+  --oa-surface-hover: #f5f5f5;
+  --oa-active-pill: transparent;
+  --oa-btn-bg: #000000;
+  --oa-btn-fg: #ffffff;
+}
+
+/* 다크 모드 (Vercel Dark) */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #000000;
+  --md-default-fg-color: #ededed;
+  --md-default-fg-color--light: #888888;
+  --md-default-fg-color--lighter: #666666;
+  --md-default-fg-color--lightest: #111111;
+
+  --md-primary-fg-color: #ffffff;
+  --md-primary-bg-color: #000000;
+  --md-accent-fg-color: #6366f1;
+
+  --md-typeset-a-color: #818cf8;
+  --md-code-bg-color: #111111;
+  --md-code-fg-color: #ededed;
+
+  --md-typeset-mark-color: #854d0e;
+  --md-typeset-del-color: #7f1d1d;
+  --md-typeset-ins-color: #14532d;
+
+  --md-footer-bg-color: #000000;
+  --md-footer-bg-color--dark: #111111;
+  --md-footer-fg-color: #ededed;
+  --md-footer-fg-color--light: #888888;
+  --md-footer-fg-color--lighter: #666666;
+
+  --oa-border: #333333;
+  --oa-border-subtle: #222222;
+  --oa-surface: #111111;
+  --oa-surface-hover: #222222;
+  --oa-active-pill: transparent;
+  --oa-btn-bg: #ffffff;
+  --oa-btn-fg: #000000;
+}
+
+/* ==========================================================================
+   2. Typography & Page Layout (Vercel / Stripe Style)
+   ========================================================================== */
+body {
+  --md-text-font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  -webkit-font-smoothing: antialiased;
+}
+
+.md-main,
+.md-container {
+  background-color: var(--md-default-bg-color);
+}
+
+/* 상단 탭 메뉴바와 하단 본문 콘텐츠 사이 수직 여백 20% 축소 */
+.md-main__inner {
+  margin-top: 0.5rem !important;
+  padding-top: 0.8rem !important;
+}
+
+.md-typeset {
+  font-size: 0.85rem;
+  /* 13.6px 정갈하고 아담한 폰트 크기 */
+  line-height: 1.7;
+  color: var(--md-default-fg-color);
+  letter-spacing: -0.01em;
+}
+
+.md-typeset h1 {
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: -0.025em;
+  color: var(--md-default-fg-color);
+  margin-bottom: 1.2rem;
+  line-height: 1.25;
+}
+
+.md-typeset h2 {
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: -0.02em;
+  margin-top: 2rem;
+  margin-bottom: 0.7rem;
+  line-height: 1.3;
+}
+
+.md-typeset h3 {
+  font-weight: 600;
+  font-size: 1.0rem;
+  letter-spacing: -0.015em;
+  margin-top: 1.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.md-typeset h4 {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+/* ==========================================================================
+   3. Header & Top Navigation Tabs (Ultra Clean Vercel Bar - Border Above Tabs Removed)
+   ========================================================================== */
+.md-header {
+  background-color: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  box-shadow: none;
+  border-bottom: none !important;
+  /* 상단 탭 위 가로줄 100% 제거 */
+}
+
+.md-header__inner {
+  padding-top: 0.45rem !important;
+  padding-bottom: 0.45rem !important;
+}
+
+.md-header__title {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--md-default-fg-color);
+}
+
+.md-tabs {
+  background-color: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  border-bottom: 1px solid var(--oa-border);
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.md-tabs .md-grid {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.md-tabs__list {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.md-tabs__list::-webkit-scrollbar {
+  display: none;
+}
+
+.md-tabs__item {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.md-tabs__link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--md-default-fg-color--light);
+  opacity: 1;
+  font-weight: 500;
+  font-size: 0.8rem;
+  height: 2.2rem;
+  line-height: 1;
+  padding: 0 0.65rem;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  margin: 0 !important;
+  transition: color 120ms ease, border-color 120ms ease;
+  white-space: nowrap;
+}
+
+.md-tabs__link:hover {
+  color: var(--md-default-fg-color);
+}
+
+.md-tabs__item--active .md-tabs__link,
+.md-tabs__link--active {
+  color: var(--md-default-fg-color);
+  font-weight: 600;
+  border-bottom-color: var(--md-default-fg-color);
+}
+
+.md-tabs__item--active {
+  box-shadow: none !important;
+}
+
+/* ==========================================================================
+   4. Sidebar Navigation (Left Primary Sidebar)
+   ========================================================================== */
+/* 좌측 메뉴 아이콘 전면 숨김(접기/펼치기 화살표 + 문서 고유 아이콘)
+   문서 아이콘은 .md-nav__link(display:flex) 안에서 아이콘 폭 + gap 만큼
+   자리를 차지해 홈 메뉴 텍스트만 오른쪽으로 밀리므로 함께 숨긴다. */
+.md-nav__icon,
+.md-sidebar--primary .md-nav__icon,
+.md-sidebar--primary .md-nav__link>.md-icon,
+.md-sidebar--primary .md-nav__link>svg,
+.md-sidebar--primary .md-nav__link>.twemoji {
+  display: none !important;
+}
+
+.md-sidebar--primary .md-nav {
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.md-sidebar--primary .md-nav__title {
+  color: var(--md-default-fg-color);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  font-size: 0.75rem;
+}
+
+.md-sidebar--primary .md-nav__link {
+  padding: 0.3em 0.5em;
+  margin: 0.05rem 0;
+  color: var(--md-default-fg-color--light);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  transition: color 120ms ease;
+}
+
+/* 섹션 인덱스 페이지(홈)는 div.md-nav__container > a.md-nav__link 2중 구조로 렌더링되어
+   위 .md-nav__link 패딩이 두 번 적용된다. Material 기본 상쇄 규칙은 모바일 전용이므로
+   데스크톱에서도 안쪽 링크의 패딩을 직접 제거해 다른 메뉴와 시작점을 일치시킨다. */
+.md-sidebar--primary .md-nav__container>.md-nav__link {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.md-sidebar--primary .md-nav__link:hover {
+  color: var(--md-default-fg-color);
+  background-color: transparent;
+}
+
+.md-sidebar--primary .md-nav__item--active>.md-nav__link {
+  color: var(--md-default-fg-color);
+  font-weight: 600;
+  background-color: transparent;
+}
+
+/* 최하위 선택된 페이지 항목만 보라색 포인트 컬러 적용 */
+.md-sidebar--primary .md-nav__link--active {
+  color: #6366f1 !important;
+  font-weight: 600 !important;
+  background-color: transparent;
+}
+
+.md-sidebar--primary .md-nav__item--section>.md-nav__link {
+  color: var(--md-default-fg-color);
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   5. Search Box & Expanded Modal (Zero Ugly Hover/Expanded Borders)
+   ========================================================================== */
+.md-search,
+.md-search__form {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  background: transparent !important;
+}
+
+.md-search__input {
+  background-color: var(--oa-surface) !important;
+  color: var(--md-default-fg-color) !important;
+  border: 1px solid var(--oa-border) !important;
+  border-radius: 6px !important;
+  font-size: 0.8rem;
+  box-shadow: none !important;
+  outline: none !important;
+  transition: border-color 150ms ease;
+}
+
+/* 마우스 호버 시 추가 테두리/외곽선/잔여선 100% 제거 */
+.md-search:hover,
+.md-search__form:hover,
+.md-search__input:hover,
+.md-search__form:hover *,
+.md-search__input:hover * {
+  border-color: var(--oa-border) !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* 클릭/포커스 시 기존 테두리 변형 및 잔여선 100% 제거 */
+.md-search__input:focus,
+.md-search__form:focus-within,
+.md-search[data-md-state="open"] .md-search__form,
+.md-search[data-md-state="open"] .md-search__input {
+  border-color: var(--oa-border) !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* 확장된 검색 모달 오버레이(Expanded Search Overlay Modal) 테두리 전면 제거 */
+.md-search__output,
+.md-search__scrollwrap,
+.md-search-result,
+.md-search[data-md-state="open"] .md-search__output,
+.md-search[data-md-state="open"] .md-search__scrollwrap {
+  border: none !important;
+  outline: none !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08) !important;
+  /* 소프트 스모크 그림자만 부여 */
+}
+
+[data-md-color-scheme="slate"] .md-search__output,
+[data-md-color-scheme="slate"] .md-search__scrollwrap,
+[data-md-color-scheme="slate"] .md-search-result {
+  border: none !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+.md-search__input::placeholder {
+  color: var(--md-default-fg-color--light);
+}
+
+.md-search__icon {
+  color: var(--md-default-fg-color--light);
+}
+
+/* ==========================================================================
+   6. Links & Buttons (Vercel Links & Solid Dark Buttons)
+   ========================================================================== */
+.md-typeset a {
+  color: var(--md-typeset-a-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 120ms ease;
+}
+
+.md-typeset a:hover {
+  opacity: 0.85;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.md-typeset .md-button {
+  background-color: var(--oa-btn-bg);
+  color: var(--oa-btn-fg);
+  border: none;
+  border-radius: 6px;
+  padding: 0.45em 1.1em;
+  font-weight: 500;
+  font-size: 0.8rem;
+  transition: opacity 120ms ease;
+}
+
+.md-typeset .md-button:hover {
+  opacity: 0.85;
+}
+
+/* ==========================================================================
+   7. Code Blocks & Refined Data Tables
+   ========================================================================== */
+.md-typeset code {
+  background-color: var(--md-code-bg-color);
+  color: var(--md-code-fg-color);
+  border-radius: 4px;
+  padding: 0.15em 0.4em;
+  font-size: 0.85em;
+  border: 1px solid var(--oa-border);
+}
+
+.md-typeset pre>code {
+  background-color: var(--md-code-bg-color);
+  color: var(--md-code-fg-color);
+  border: 1px solid var(--oa-border);
+  border-radius: 6px;
+  padding: 0.9em 1.1em;
+}
+
+/* 표(Table) 디자인 및 가독성 최적화 */
+.md-typeset table:not([class]) {
+  border: 1px solid var(--oa-border);
+  border-radius: 6px;
+  overflow: hidden;
+  font-size: 0.8rem;
+  margin: 1.5rem 0;
+  box-shadow: none;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--oa-surface);
+  color: var(--md-default-fg-color);
+  font-weight: 600;
+  font-size: 0.775rem;
+  letter-spacing: 0.01em;
+  border-bottom: 1px solid var(--oa-border);
+  padding: 0.55em 0.85em;
+}
+
+.md-typeset table:not([class]) td {
+  border-top: 1px solid var(--oa-border-subtle);
+  padding: 0.55em 0.85em;
+  line-height: 1.5;
+}
+
+.md-typeset table:not([class]) tr:hover {
+  background-color: var(--oa-surface-hover);
+}
+
+/* ==========================================================================
+   8. Right-Side Table of Contents (Trailing Purple Dot & Neutral Scrollbar)
+   ========================================================================== */
+.md-sidebar__scrollwrap {
+  scrollbar-width: thin;
+  scrollbar-color: var(--oa-border) transparent;
+}
+
+.md-sidebar__scrollwrap::-webkit-scrollbar {
+  width: 4px;
+}
+
+.md-sidebar__scrollwrap::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
+  background-color: var(--oa-border);
+  border-radius: 99px;
+}
+
+.md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover {
+  background-color: var(--md-default-fg-color--lighter);
+}
+
+.md-sidebar--secondary .md-nav {
+  font-size: 0.725rem;
+  line-height: 1.5;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+.md-sidebar--secondary .md-nav__title {
+  font-weight: 700;
+  font-size: 0.725rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: 0.6rem;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+.md-sidebar--secondary .md-nav--secondary>.md-nav__list,
+.md-sidebar--secondary .md-toc__list {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+.md-sidebar--secondary .md-nav--secondary>.md-nav__list>.md-nav__item,
+.md-sidebar--secondary .md-toc__list>.md-toc__item,
+.md-sidebar--secondary .md-nav__item {
+  padding-left: 0 !important;
+  margin: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.md-sidebar--secondary .md-nav--secondary>.md-nav__list>.md-nav__item>.md-nav__link,
+.md-sidebar--secondary .md-toc__list>.md-toc__item>.md-toc__link,
+.md-sidebar--secondary .md-nav__link {
+  display: inline-flex !important;
+  align-items: center !important;
+  font-size: 0.725rem;
+  line-height: 1.45 !important;
+  color: var(--md-default-fg-color--light);
+  padding: 0.22em 0 !important;
+  margin: 0 !important;
+  transition: color 150ms ease;
+  text-decoration: none !important;
+  background: transparent !important;
+}
+
+.md-sidebar--secondary .md-nav__link::after,
+.md-toc__link::after {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #6366f1;
+  box-shadow: 0 0 6px rgba(99, 102, 241, 0.45);
+  opacity: 0;
+  transform: scale(0);
+  margin-left: 0.45rem;
+  flex-shrink: 0;
+  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1), opacity 180ms ease;
+}
+
+/* 오른쪽 목차(TOC) 하위 뎁스(H3, H4 등) 들여쓰기 간격 슬림 조율 */
+.md-sidebar--secondary .md-nav__list .md-nav__list {
+  padding-left: 0.5rem !important;
+  margin-left: 0 !important;
+}
+
+.md-sidebar--secondary .md-nav__list .md-nav__list .md-nav__link {
+  padding-left: 0 !important;
+  /* 중복 패딩 부여 차단 */
+}
+
+.md-sidebar--secondary .md-nav__list .md-nav__list .md-nav__list {
+  padding-left: 0.5rem !important;
+}
+
+.md-sidebar--secondary .md-nav__link:hover,
+.md-toc__link:hover {
+  color: var(--md-default-fg-color);
+  text-decoration: none !important;
+  background: transparent !important;
+}
+
+.md-sidebar--secondary .md-toc__link--active,
+.md-sidebar--secondary .md-nav__link--active {
+  color: #6366f1 !important;
+  font-weight: 600 !important;
+  background: transparent !important;
+}
+
+.md-sidebar--secondary .md-toc__link--active::after,
+.md-sidebar--secondary .md-nav__link--active::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ==========================================================================
+   9. Breadcrumbs & Footer
+   ========================================================================== */
+.md-banner {
+  background-color: var(--oa-surface);
+  color: var(--md-default-fg-color);
+  border-bottom: 1px solid var(--oa-border);
+}
+
+.md-path {
+  font-size: 0.75rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-path__link {
+  color: var(--md-default-fg-color--light);
+}
+
+.md-path__link:hover {
+  color: var(--md-default-fg-color);
+}
+
+.md-footer {
+  background-color: var(--md-footer-bg-color);
+  border-top: 1px solid var(--oa-border);
+}
+
+.md-footer-meta {
+  background-color: var(--md-footer-bg-color--dark);
+  border-top: 1px solid var(--oa-border-subtle);
+}
+
+/* ==========================================================================
+   10. Functional Rules (Preserved)
+   ========================================================================== */
+[data-md-color-scheme="default"] .logo-dark {
+  display: none !important;
+}
+
+[data-md-color-scheme="slate"] .logo-light {
+  display: none !important;
+}
+
+/* 내비게이션 깊이 제어 */
+[data-md-level="2"] .md-nav {
+  display: none;
+}
+
+/* 접기/펼치기 아이콘 숨김 */
+.md-nav__icon {
+  display: none;
+}
+
+/* 노트북 다운로드 버튼 레이아웃 */
+.notebook-links {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.notebook-links .md-content__button {
+  margin-left: 0.5rem;
+}
+
+/* Jupyter 프롬프트 숨김 */
+.jupyter-wrapper .jp-CodeCell .jp-Cell-inputWrapper .jp-InputPrompt.jp-InputArea-prompt {
+  display: none !important;
+}
+
+.jupyter-wrapper .jp-Notebook .jp-Cell .jp-OutputPrompt {
+  display: none !important;
+}
+
+/* ==========================================================================
+   11. Toast & Clipboard Share Notification (Compact Refined Vercel Toast)
+   ========================================================================== */
+.md-clipboard__message,
+.md-dialog,
+.md-toast,
+.md-snackbar {
+  background-color: var(--md-default-bg-color) !important;
+  color: var(--md-default-fg-color) !important;
+  border: 1px solid var(--oa-border) !important;
+  border-radius: 6px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+  font-size: 0.725rem !important;
+  /* 컴팩트 아담한 폰트 스케일 (약 11.6px) */
+  font-weight: 500 !important;
+  line-height: 1.3 !important;
+  padding: 0.4rem 0.75rem !important;
+  letter-spacing: -0.01em !important;
+}
+
+.md-clipboard__message *,
+.md-dialog *,
+.md-toast *,
+.md-snackbar * {
+  font-size: 0.725rem !important;
+  line-height: 1.3 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+[data-md-color-scheme="slate"] .md-clipboard__message,
+[data-md-color-scheme="slate"] .md-dialog,
+[data-md-color-scheme="slate"] .md-toast,
+[data-md-color-scheme="slate"] .md-snackbar {
+  background-color: #111111 !important;
+  color: #ededed !important;
+  border: 1px solid #333333 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* ==========================================================================
+   12. Content Tabs (pymdownx.tabbed) - 마우스 호버 시 텍스트 밑줄 제거
+   ========================================================================== */
+.md-typeset .tabbed-set .tabbed-labels > label,
+.md-typeset .tabbed-set .tabbed-labels > label *,
+.md-typeset .tabbed-set .tabbed-labels a,
+.md-typeset .tabbed-set .tabbed-labels a * {
+  text-decoration: none !important;
+}
+
+.md-typeset .tabbed-set .tabbed-labels > label:hover,
+.md-typeset .tabbed-set .tabbed-labels > label:hover *,
+.md-typeset .tabbed-set .tabbed-labels a:hover,
+.md-typeset .tabbed-set .tabbed-labels a:hover * {
+  text-decoration: none !important;
 }
