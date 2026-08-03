@@ -482,6 +482,17 @@ body {
   font-size: 1em;
 }
 
+/* 어노테이션 / 각주 툴팁
+   툴팁 내부는 <div class="md-tooltip__inner md-typeset">라 두 클래스를 동시에 가진다.
+   Material의 .md-tooltip__inner(0.64rem)와 위 .md-typeset(0.85rem)은 특이도가 같아
+   나중에 로드되는 extra.css가 이겨버리고, 좁은 툴팁 글자가 본문과 같은 17px가 된다.
+   특이도를 한 단계 높여 보조 정보 크기로 되돌린다.
+   툴팁은 문맥에 흐르지 않고 떠 있는 요소이므로 어디서 열리든 같은 크기가 되도록 rem을 쓴다. */
+.md-tooltip__inner.md-typeset {
+  font-size: 0.725rem;
+  line-height: 1.6;
+}
+
 .md-typeset table:not([class]) tr:hover {
   background-color: var(--oa-surface-hover);
 }
