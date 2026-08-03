@@ -44,9 +44,9 @@
 
   --md-primary-fg-color: #000000;
   --md-primary-bg-color: #ffffff;
-  --md-accent-fg-color: #6366f1;
+  --md-accent-fg-color: #2B5BA4;
 
-  --md-typeset-a-color: #6366f1;
+  --md-typeset-a-color: #2B5BA4;
   --md-code-bg-color: #fafafa;
   --md-code-fg-color: #111111;
 
@@ -79,9 +79,9 @@
 
   --md-primary-fg-color: #ffffff;
   --md-primary-bg-color: #000000;
-  --md-accent-fg-color: #6366f1;
+  --md-accent-fg-color: #3b82f6;
 
-  --md-typeset-a-color: #818cf8;
+  --md-typeset-a-color: #60a5fa;
   --md-code-bg-color: #111111;
   --md-code-fg-color: #ededed;
 
@@ -304,9 +304,9 @@ body {
   background-color: transparent;
 }
 
-/* 최하위 선택된 페이지 항목만 보라색 포인트 컬러 적용 */
+/* 최하위 선택된 페이지 항목만 파랑색 포인트 컬러 적용 */
 .md-sidebar--primary .md-nav__link--active {
-  color: #6366f1 !important;
+  color: var(--md-typeset-a-color) !important;
   font-weight: 600 !important;
   background-color: transparent;
 }
@@ -438,30 +438,40 @@ body {
   padding: 0.9em 1.1em;
 }
 
-/* 표(Table) 디자인 및 가독성 최적화 */
+/* 표(Table) 디자인 및 가독성 최적화
+   표는 셀 배경·테두리 때문에 같은 크기여도 본문보다 크고 무겁게 읽힌다.
+   본문(0.85rem) 대비 약 85%인 0.725rem으로 낮춰 좌측 내비(0.75rem),
+   우측 목차(0.725rem)와 같은 눈높이에 맞춘다. */
 .md-typeset table:not([class]) {
   border: 1px solid var(--oa-border);
   border-radius: 6px;
   overflow: hidden;
-  font-size: 0.8rem;
+  font-size: 0.725rem;
   margin: 1.5rem 0;
   box-shadow: none;
 }
 
+/* 헤더와 셀은 같은 크기를 쓰고 굵기로만 위계를 준다
+   (기존에는 헤더가 셀보다 작아 위계가 뒤집혀 있었다) */
 .md-typeset table:not([class]) th {
   background-color: var(--oa-surface);
   color: var(--md-default-fg-color);
   font-weight: 600;
-  font-size: 0.775rem;
+  font-size: inherit;
   letter-spacing: 0.01em;
   border-bottom: 1px solid var(--oa-border);
-  padding: 0.55em 0.85em;
+  padding: 0.6em 0.9em;
 }
 
 .md-typeset table:not([class]) td {
   border-top: 1px solid var(--oa-border-subtle);
-  padding: 0.55em 0.85em;
-  line-height: 1.5;
+  padding: 0.6em 0.9em;
+  line-height: 1.55;
+}
+
+/* 인라인 코드는 em 단위라 표 안에서 과하게 작아진다. 셀 대비 축소폭을 줄인다 */
+.md-typeset table:not([class]) code {
+  font-size: 0.92em;
 }
 
 .md-typeset table:not([class]) tr:hover {
@@ -469,7 +479,7 @@ body {
 }
 
 /* ==========================================================================
-   8. Right-Side Table of Contents (Trailing Purple Dot & Neutral Scrollbar)
+   8. Right-Side Table of Contents (Trailing Blue Dot & Neutral Scrollbar)
    ========================================================================== */
 .md-sidebar__scrollwrap {
   scrollbar-width: thin;
@@ -548,8 +558,8 @@ body {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: #6366f1;
-  box-shadow: 0 0 6px rgba(99, 102, 241, 0.45);
+  background-color: var(--md-typeset-a-color);
+  box-shadow: 0 0 6px var(--md-typeset-a-color);
   opacity: 0;
   transform: scale(0);
   margin-left: 0.45rem;
@@ -581,7 +591,7 @@ body {
 
 .md-sidebar--secondary .md-toc__link--active,
 .md-sidebar--secondary .md-nav__link--active {
-  color: #6366f1 !important;
+  color: var(--md-typeset-a-color) !important;
   font-weight: 600 !important;
   background: transparent !important;
 }
@@ -708,15 +718,15 @@ body {
 /* ==========================================================================
    12. Content Tabs (pymdownx.tabbed) - 마우스 호버 시 텍스트 밑줄 제거
    ========================================================================== */
-.md-typeset .tabbed-set .tabbed-labels > label,
-.md-typeset .tabbed-set .tabbed-labels > label *,
+.md-typeset .tabbed-set .tabbed-labels>label,
+.md-typeset .tabbed-set .tabbed-labels>label *,
 .md-typeset .tabbed-set .tabbed-labels a,
 .md-typeset .tabbed-set .tabbed-labels a * {
   text-decoration: none !important;
 }
 
-.md-typeset .tabbed-set .tabbed-labels > label:hover,
-.md-typeset .tabbed-set .tabbed-labels > label:hover *,
+.md-typeset .tabbed-set .tabbed-labels>label:hover,
+.md-typeset .tabbed-set .tabbed-labels>label:hover *,
 .md-typeset .tabbed-set .tabbed-labels a:hover,
 .md-typeset .tabbed-set .tabbed-labels a:hover * {
   text-decoration: none !important;
