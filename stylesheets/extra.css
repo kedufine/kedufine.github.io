@@ -474,6 +474,14 @@ body {
   font-size: 0.92em;
 }
 
+/* 콜아웃(admonition)·접기 박스 내부는 Material이 0.64rem(12.8px)까지 줄이지만,
+   위 표 규칙의 rem은 루트 기준이라 축소를 따라가지 않아 표만 커 보인다.
+   박스 안에서는 em으로 전환해 주변 텍스트와 같은 크기가 되게 한다. */
+.md-typeset .admonition table:not([class]),
+.md-typeset details table:not([class]) {
+  font-size: 1em;
+}
+
 .md-typeset table:not([class]) tr:hover {
   background-color: var(--oa-surface-hover);
 }
