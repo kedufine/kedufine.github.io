@@ -482,12 +482,65 @@ body {
   font-size: 0.92em;
 }
 
-/* 콜아웃(admonition)·접기 박스 내부는 Material이 0.64rem(12.8px)까지 줄이지만,
-   위 표 규칙의 rem은 루트 기준이라 축소를 따라가지 않아 표만 커 보인다.
-   박스 안에서는 em으로 전환해 주변 텍스트와 같은 크기가 되게 한다. */
+/* 콜아웃(admonition)·접기 박스(details) 내 표(Table) 전용 레이아웃 및 여백 최적화
+   - 과도한 상하 여백(1.5rem)을 컴팩트하게 조정(0.8rem / 0.5rem)하여 위쪽 텍스트/목록 및 하단 테두리와의 간격을 조화롭게 유지
+   - 너비를 100%로 확장하고 table-layout: fixed를 적용하여 콜아웃 내부를 가득 채움으로써 좌우 여백 불균형 및 들여쓰기 어색함 해소
+   - 글자 크기를 부모 요소(0.95em)에 맞추고 정갈한 테두리, 배경색, 호버 효과를 적용 */
 .md-typeset .admonition table:not([class]),
-.md-typeset details table:not([class]) {
-  font-size: 1em;
+.md-typeset details table:not([class]),
+.md-typeset .admonition table,
+.md-typeset details table {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  margin: 0.8rem 0 0.5rem 0;
+  font-size: 0.95em;
+  border-collapse: separate;
+  border-spacing: 0;
+  box-sizing: border-box;
+  border: 1px solid var(--oa-border);
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: var(--md-default-bg-color);
+  box-shadow: none;
+}
+
+.md-typeset .admonition table:not([class]) th,
+.md-typeset details table:not([class]) th,
+.md-typeset .admonition table th,
+.md-typeset details table th {
+  padding: 0.55em 0.9em;
+  background-color: var(--oa-surface);
+  color: var(--md-default-fg-color);
+  font-weight: 600;
+  font-size: inherit;
+  letter-spacing: 0.01em;
+  border-bottom: 1px solid var(--oa-border);
+  text-align: left;
+}
+
+.md-typeset .admonition table:not([class]) td,
+.md-typeset details table:not([class]) td,
+.md-typeset .admonition table td,
+.md-typeset details table td {
+  padding: 0.55em 0.9em;
+  line-height: 1.55;
+  border-top: 1px solid var(--oa-border-subtle);
+  font-size: inherit;
+}
+
+.md-typeset .admonition table:not([class]):last-child,
+.md-typeset details table:not([class]):last-child,
+.md-typeset .admonition table:last-child,
+.md-typeset details table:last-child {
+  margin-bottom: 0.3rem;
+}
+
+.md-typeset .admonition table:not([class]) tr:hover,
+.md-typeset details table:not([class]) tr:hover,
+.md-typeset .admonition table tr:hover,
+.md-typeset details table tr:hover {
+  background-color: var(--oa-surface-hover);
 }
 
 /* 어노테이션 / 각주 툴팁
