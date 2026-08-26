@@ -39,16 +39,10 @@
     
     
       
-        <script src="https://unpkg.com/iframe-worker/shim"></script>
+        <script src="../javascripts/iframe-worker.js"></script>
       
     
     
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Noto Sans KR";--md-code-font:"Fira Code"}</style>
       
     
     
@@ -1700,7 +1694,7 @@ K-에듀파인 시스템은 폐쇄망으로 운영되므로 외부 인터넷 메
 <h2 id="_3">메일작성</h2>
 <p>메일작성 화면은 사용자가 특정 대상에게 내부메일을 작성하여 발송하는 공간입니다.
 이 화면은 제목, 수신자, 발송 옵션 등을 설정하는 메일 정보 영역과 내용을 입력하는 본문 영역으로 구성되어 있습니다.</p>
-<h3 id="_4"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0-8 5-8-5zm0 12H4V8l8 5 8-5z"/></svg></span> 본문 작성 및 발송</h3>
+<h3 id="_4"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z"/></svg></span> 본문 작성 및 발송</h3>
 <p>사용자는 메일의 제목과 본문을 입력하고 필요한 경우 파일을 첨부하여 메일을 보낼 수 있습니다.
 메일 작성을 완료한 후에는 <strong>발신</strong> 버튼을 클릭하여 즉시 메일을 발송하거나 <strong>임시저장</strong> 버튼을 클릭하여 나중에 이어서 작성할 수 있습니다.</p>
 <div class="admonition warning">
@@ -1729,7 +1723,7 @@ K-에듀파인 시스템은 폐쇄망으로 운영되므로 외부 인터넷 메
 <li>예약 발신 옵션은 지정한 날짜와 시간에 메일이 예약발송되도록 설정</li>
 </ul>
 </details>
-<h3 id="_5"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0-8 5-8-5zm0 12H4V8l8 5 8-5z"/></svg></span> 수신자 지정</h3>
+<h3 id="_5"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z"/></svg></span> 수신자 지정</h3>
 <p>메일을 받을 대상을 받는사람, 참조, 숨은참조로 구분하여 지정할 수 있습니다. 수신자 지정은 아래와 같은 방법을 통해 가능합니다.</p>
 <ul>
 <li>사용자 검색, 개인 수신 그룹, 조직도 등의 탭을 활용하여 수신자를 찾아 추가</li>
@@ -1750,44 +1744,44 @@ K-에듀파인 시스템은 폐쇄망으로 운영되므로 외부 인터넷 메
 </ul>
 </div>
 <h2 id="_7">메일함</h2>
-<h3 id="_8"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0-8 5-8-5zm0 12H4V8l8 5 8-5z"/></svg></span> 미확인수신메일함</h3>
+<h3 id="_8"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z"/></svg></span> 미확인수신메일함</h3>
 <p><strong>미확인수신메일함</strong>은 사용자가 수신한 메일 중 아직 확인하지 않은 메일의 목록을 확인하는 공간입니다.
 이 화면에서 메일을 직접 확인하지 않고도 읽음 처리하거나 중요 메일을 별도로 보관하는 등 목록을 관리할 수 있습니다.</p>
 <p>미확인수신메일함에 있는 메일은 시도 교육청 및 개인이 설정한 보관 기간이 지나면 자동으로 휴지통으로 이동되며, 휴지통에서도 보관일이 지나면 영구 삭제됩니다.
 중요한 메일은 삭제되지 않는 개인메일함으로 이동하여 보관하는 것을 권장드립니다.</p>
-<h3 id="_9"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0-8 5-8-5zm0 12H4V8l8 5 8-5z"/></svg></span> 수신메일함</h3>
+<h3 id="_9"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z"/></svg></span> 수신메일함</h3>
 <p><strong>수신메일함</strong>은 사용자가 수신한 모든 메일의 목록을 확인하고 관리하는 공간입니다.
 이 화면에서는 메일 목록을 관리하고 메일 내용을 상세히 조회하여 답장, 전달 등의 후속 작업을 수행할 수 있습니다.</p>
-<h3 id="_10"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0-8 5-8-5zm0 12H4V8l8 5 8-5z"/></svg></span> 발신메일함</h3>
+<h3 id="_10"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z"/></svg></span> 발신메일함</h3>
 <p><strong>발신메일함</strong>은 사용자가 발송한 메일의 목록을 확인하고 관리하는 공간입니다.
 이 화면은 메일 작성 시 <strong>발신메일저장</strong> 옵션을 선택한 메일만 조회됩니다.
 메일 회수와 같은 주요 기능을 사용하려면 메일 작성 시 반드시 <strong>발신메일저장</strong> 옵션을 선택해야 합니다.</p>
-<h3 id="_11"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0-8 5-8-5zm0 12H4V8l8 5 8-5z"/></svg></span> 개인메일함</h3>
+<h3 id="_11"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z"/></svg></span> 개인메일함</h3>
 <p><strong>개인메일함</strong>은 사용자가 수신메일함이나 발신메일함에서 중요한 메일을 별도로 보관하기 위해 이동시킨 메일 목록을 확인하고 관리하는 공간입니다.
 사용자는 <strong>메일함관리</strong> 메뉴를 통해 개인메일함을 직접 생성할 수 있으며, 다른 메일함과 달리 개인메일함으로 옮겨진 메일은 설정된 보관 기한이 지나도 자동으로 삭제되지 않는 특징이 있습니다.</p>
 <p>개인메일함 기능은 메일함관리 메뉴에서 사용자가 직접 개인메일함을 생성한 후에 사용할 수 있습니다.
 시스템에서 자동으로 삭제되지 않아야 하는 중요 메일은 개인메일함으로 이동하여 보관하는 것을 권장드립니다.</p>
-<h3 id="_12"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0-8 5-8-5zm0 12H4V8l8 5 8-5z"/></svg></span> 차단메일함</h3>
+<h3 id="_12"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z"/></svg></span> 차단메일함</h3>
 <p><strong>차단메일함</strong>은 사용자가 <strong>내부메일설정</strong>에서 등록한 자동분류규칙(자동필터)에 따라 특정 조건의 메일이 자동으로 이동되어 보관되는 공간입니다.
 차단메일함의 메일은 개인메일함과 달리 영구 보관되지 않습니다.
 시도 교육청 및 개인이 설정한 보관 기간이 지나면 자동으로 휴지통으로 이동되며, 이후 휴지통의 보관 기간이 만료되면 영구 삭제됩니다.</p>
-<h3 id="_13"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0-8 5-8-5zm0 12H4V8l8 5 8-5z"/></svg></span> 휴지통</h3>
+<h3 id="_13"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z"/></svg></span> 휴지통</h3>
 <p><strong>휴지통</strong>은 각 메일함에서 사용자가 삭제한 메일이 영구 삭제되기 전 임시로 보관되는 공간입니다.
 사용자는 삭제했던 메일을 최종적으로 처리하기 전에 이곳에서 목록을 확인하고 복구하거나 영구 삭제할 수 있습니다.
 실수로 삭제한 메일을 선택한 후 <strong>복구</strong> 버튼을 클릭하면 삭제되기 이전의 메일함으로 다시 이동시킬 수 있습니다.</p>
 <p>휴지통으로 이동된 메일은 시도총괄관리자 및 개인이 설정한 보관일이 지나면 자동으로 영구 삭제됩니다.
 자동 또는 수동으로 영구 삭제된 메일은 다시 복구할 수 없으므로 주의가 필요합니다.</p>
 <h2 id="_14">메일함 기능</h2>
-<h3 id="_15"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0-8 5-8-5zm0 12H4V8l8 5 8-5z"/></svg></span> 수신확인</h3>
+<h3 id="_15"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z"/></svg></span> 수신확인</h3>
 <p>발신메일함의 상세화면에서 <strong>수신확인</strong> 버튼을 클릭하면 팝업창을 통해 수신자들이 메일을 읽었는지 여부를 확인할 수 있습니다.
 <strong>개인수신그룹등록</strong> 버튼을 이용하여 현재 메일의 수신자 목록을 개인수신그룹으로 등록할 수 있습니다.</p>
-<h3 id="_16"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0-8 5-8-5zm0 12H4V8l8 5 8-5z"/></svg></span> 목록화면 기능</h3>
+<h3 id="_16"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z"/></svg></span> 목록화면 기능</h3>
 <ul>
 <li>
 <p>메일다운로드</p>
 <p class="annotate"><strong>메일다운로드</strong> (1) 버튼을 클릭하여 선택한 메일을 HTML 파일 형태로 PC에 저장할 수 있습니다. 다운로드한 파일은 웹 브라우저를 통해 내용을 확인할 수 있습니다.</p>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> 메일다운로드 가능화면<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg></span> 메일다운로드 가능화면<ul>
 <li>임시보관함</li>
 <li>미확인수신메일함</li>
 <li>수신메일함</li>
@@ -1803,7 +1797,7 @@ K-에듀파인 시스템은 폐쇄망으로 운영되므로 외부 인터넷 메
 <p>자동분류설정</p>
 <p class="annotate">특정 메일을 선택하고 <strong>자동분류설정</strong> (1) 버튼을 클릭하여, 앞으로 해당 메일의 제목, 발신자, 또는 본문 내용과 일치하는 메일이 특정 메일함으로 자동 분류되도록 규칙을 설정할 수 있습니다.</p>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> 자동분류설정 가능화면<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg></span> 자동분류설정 가능화면<ul>
 <li>임시보관함</li>
 <li>미확인수신메일함</li>
 <li>수신메일함</li>
@@ -1815,7 +1809,7 @@ K-에듀파인 시스템은 폐쇄망으로 운영되므로 외부 인터넷 메
 <p>읽음</p>
 <p class="annotate">메일을 열어보지 않고 목록에서 선택한 후 <strong>읽음</strong> (1) 버튼을 클릭하여 읽음 상태로 변경할 수 있습니다.</p>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> 읽음 가능화면<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg></span> 읽음 가능화면<ul>
 <li>미확인수신메일함</li>
 <li>수신메일함</li>
 <li>개인메일함</li>
@@ -1827,7 +1821,7 @@ K-에듀파인 시스템은 폐쇄망으로 운영되므로 외부 인터넷 메
 <p>이동</p>
 <p class="annotate">중요한 메일을 선택하여 <strong>이동</strong> (1) 버튼을 통해 개인메일함으로 옮겨 보관할 수 있습니다. 개인메일함이 미리 생성되어 있어야 이 기능을 사용할 수 있습니다.</p>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> 이동 가능화면<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg></span> 이동 가능화면<ul>
 <li>미확인수신메일함</li>
 <li>수신메일함</li>
 <li>발신메일함</li>
@@ -1841,7 +1835,7 @@ K-에듀파인 시스템은 폐쇄망으로 운영되므로 외부 인터넷 메
 <p>회수</p>
 <p class="annotate">회수 대상 메일 한 건을 선택한 후 <strong>회수</strong> (1) 버튼을 클릭합니다. 회수 팝업이 열리면 회수를 원하는 수신자를 선택하여 발신한 메일을 회수합니다. 이미 확인이 완료된 수신자는 회수할 수 없습니다.</p>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> 회수 가능화면<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg></span> 회수 가능화면<ul>
 <li>발신메일함</li>
 <li>개인메일함</li>
 </ul>
@@ -1852,7 +1846,7 @@ K-에듀파인 시스템은 폐쇄망으로 운영되므로 외부 인터넷 메
 <p>삭제</p>
 <p class="annotate">메일을 선택한 후 <strong>삭제</strong> (1) 버튼을 클릭하면 해당 메일이 휴지통으로 이동됩니다. <strong>완전삭제</strong> (2) 버튼을 이용하면 선택한 메일을 휴지통을 거치지 않고 즉시 영구적으로 삭제합니다. 완전삭제된 메일은 복구할 수 없습니다.</p>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> 삭제 가능화면<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg></span> 삭제 가능화면<ul>
 <li>임시보관함</li>
 <li>미확인수신메일함</li>
 <li>수신메일함</li>
@@ -1861,7 +1855,7 @@ K-에듀파인 시스템은 폐쇄망으로 운영되므로 외부 인터넷 메
 <li>차단메일함</li>
 </ul>
 </li>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> 완전삭제 가능화면<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg></span> 완전삭제 가능화면<ul>
 <li>임시보관함</li>
 <li>미확인수신메일함</li>
 <li>수신메일함</li>
@@ -1878,13 +1872,13 @@ K-에듀파인 시스템은 폐쇄망으로 운영되므로 외부 인터넷 메
 <p>조회된 메일 목록을 파일로 다운로드하거나 PC에 저장할 수 있으며, 목록을 인쇄하는 기능도 제공합니다.</p>
 </li>
 </ul>
-<h3 id="_17"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0-8 5-8-5zm0 12H4V8l8 5 8-5z"/></svg></span> 상세화면 기능</h3>
+<h3 id="_17"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z"/></svg></span> 상세화면 기능</h3>
 <ul>
 <li>
 <p>답장</p>
 <p class="annotate">수신한 메일에 대한 답장을 작성합니다. <strong>전체답장</strong> (1) 버튼을 이용해 전체수신자에게 답장이 가능합니다.</p>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> 답장 가능화면<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg></span> 답장 가능화면<ul>
 <li>미확인수신메일함</li>
 <li>수신메일함</li>
 <li>개인메일함</li>
@@ -1896,7 +1890,7 @@ K-에듀파인 시스템은 폐쇄망으로 운영되므로 외부 인터넷 메
 <p>전달</p>
 <p class="annotate"><strong>전달</strong> (1) 버튼을 클릭하여 해당 메일을 다른 사용자에게 전달할 수 있습니다.</p>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> 전달 가능화면<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg></span> 전달 가능화면<ul>
 <li>미확인수신메일함</li>
 <li>수신메일함</li>
 <li>발신메일함</li>
@@ -1911,7 +1905,7 @@ K-에듀파인 시스템은 폐쇄망으로 운영되므로 외부 인터넷 메
 </li>
 </ul>
 <h2 id="_18">메일관리</h2>
-<h3 id="_19"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0-8 5-8-5zm0 12H4V8l8 5 8-5z"/></svg></span> 메일함관리</h3>
+<h3 id="_19"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z"/></svg></span> 메일함관리</h3>
 <p><strong>메일함관리</strong>는 내부메일 사용량을 확인하고, 중요한 메일을 영구 보관하기 위한 개인메일함을 관리하는 공간입니다.
 사용자는 이 화면에서 메일함의 상태를 점검하고 필요에 따라 개인메일함을 추가하거나 기존 메일함의 데이터를 일괄 처리할 수 있습니다.
 메일함관리 화면은 내부메일 사용량, 기본메일함, 개인메일함 3개 영역으로 구분됩니다.</p>
@@ -1928,12 +1922,12 @@ K-에듀파인 시스템은 폐쇄망으로 운영되므로 외부 인터넷 메
 <p>개인메일함</p>
 <p class="annotate">개인메일함 목록 및 정보(분류규칙설정여부 (1) , 메일개수, 사용량(MB))를 조회할 수 있습니다. 행추가, 행삭제 (2) 버튼을 통해 개인메일함을 직접 생성, 수정, 삭제할 수 있습니다. </p>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> 자동분류규칙에 의해 사용되고 있는지 여부</li>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> 기본 메일함은 삭제 불가능</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg></span> 자동분류규칙에 의해 사용되고 있는지 여부</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg></span> 기본 메일함은 삭제 불가능</li>
 </ol>
 </li>
 </ul>
-<h3 id="_20"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0-8 5-8-5zm0 12H4V8l8 5 8-5z"/></svg></span> 내부메일설정</h3>
+<h3 id="_20"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z"/></svg></span> 내부메일설정</h3>
 <p><strong>내부메일설정</strong>은 개인의 메일 사용 환경을 직접 설정하는 공간입니다.
 시도총괄관리자가 설정한 범위 내에서 사용자는 자신의 편의에 맞게 설정을 변경할 수 있습니다.
 내부메일설정, 자동분류규칙설정으로 구분됩니다.</p>
@@ -1949,7 +1943,7 @@ K-에듀파인 시스템은 폐쇄망으로 운영되므로 외부 인터넷 메
 <li>
 <p class="annotate">등록된 서명 중 하나를 기본 서명으로 지정하면 메일 작성 시 해당 서명이 자동으로 입력 (1)</p>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> 서명자동포함여부를 체크해야 자동 서명 기능이 동작</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg></span> 서명자동포함여부를 체크해야 자동 서명 기능이 동작</li>
 </ol>
 </li>
 </ul>
@@ -1968,7 +1962,7 @@ K-에듀파인 시스템은 폐쇄망으로 운영되므로 외부 인터넷 메
 </div>
 </li>
 </ul>
-<h3 id="_21"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0-8 5-8-5zm0 12H4V8l8 5 8-5z"/></svg></span> 메일서식관리</h3>
+<h3 id="_21"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z"/></svg></span> 메일서식관리</h3>
 <p><strong>메일서식관리</strong>는 사용자가 자주 사용하는 메일 양식을 서식으로 만들어 관리하는 공간입니다.
 이를 통해 반복적인 메일 작성 업무를 간소화할 수 있습니다.</p>
 <h2 id="_22">권한 종류</h2>
@@ -2162,19 +2156,21 @@ K-에듀파인 시스템은 폐쇄망으로 운영되므로 외부 인터넷 메
     
       <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
-        <script src="https://unpkg.com/lunr/lunr.js"></script>
+        <script src="../javascripts/lunr.js"></script>
       
-        <script src="https://unpkg.com/lunr-languages/lunr.stemmer.support.js"></script>
+        <script src="../javascripts/lunr.stemmer.support.js"></script>
       
-        <script src="https://unpkg.com/lunr-languages/tinyseg.js"></script>
+        <script src="../javascripts/tinyseg.js"></script>
       
-        <script src="https://unpkg.com/lunr-languages/lunr.ko.js"></script>
+        <script src="../javascripts/lunr.ko.js"></script>
       
-        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+        <script src="../javascripts/tablesort.min.js"></script>
       
         <script src="../javascripts/tablesort.js"></script>
       
         <script src="../javascripts/copy.js"></script>
+      
+        <script src="../javascripts/mermaid.min.js"></script>
       
     
   </body>

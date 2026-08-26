@@ -2,8 +2,11 @@
    K-에듀파인 업무관리 사용자교육자료 - Stripe / Vercel Docs Custom Stylesheet
    ========================================================================== */
 
-/* Pretendard 웹폰트 */
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.min.css");
+/* 폰트: 폐쇄망 호환 시스템 폰트 스택 설정 */
+:root {
+  --md-text-font-family: "Pretendard Variable", "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --md-code-font-family: "Fira Code", SFMono-Regular, Consolas, Menlo, Monaco, "Courier New", monospace;
+}
 
 @keyframes heart {
 

@@ -39,16 +39,10 @@
     
     
       
-        <script src="https://unpkg.com/iframe-worker/shim"></script>
+        <script src="../javascripts/iframe-worker.js"></script>
       
     
     
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Noto Sans KR";--md-code-font:"Fira Code"}</style>
       
     
     
@@ -640,6 +634,8 @@
       
         
       
+        
+      
     
     
       
@@ -1210,6 +1206,28 @@
   
   <span class="md-ellipsis">
     내부메일
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09_service-common/qna_10.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    서비스공통
     
   </span>
   
@@ -2434,7 +2452,7 @@
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16v-3c0-1.11-.89-2-2-2h-6V8h2V2H9v6h2v3H5c-1.11 0-2 .89-2 2v3H1v6h6v-6H5v-3h6v3H9v6h6v-6h-2v-3h6v3h-2v6h6v-6zM11 4h2v2h-2zM5 20H3v-2h2zm8 0h-2v-2h2zm8 0h-2v-2h2z"/></svg></span> 서비스공통 → 조직및사용자 → (업무)사용자관리 → 사용자관리</p>
 <div class="admonition question">
 <p class="admonition-title">문서 발송 시 '부서장이 설정되어 있지 않습니다' 문구와 함께 발송처리가 되지 않습니다.</p>
-<p>부서장 미지정으로 발생하는 오류이므로 조직관리에서 부서장을 지정해야 합니다.</p>
+<p>부서장 미지정으로 발생하는 오류입니다. [서비스공통] &gt; [조직및사용자] &gt; [(업무)사용자관리] &gt; [사용자관리] 화면에서 부서장으로 지정할 사용자를 선택한 뒤 [부서장지정] 버튼을 클릭하여 지정해야 합니다.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">발송처리 누르면 서명 구분에 부서장 설정이 되어있지 않다는 알림이 뜨며 진행이 안되는데, 어떤 설정이 필요한가요?</p>
@@ -2697,9 +2715,9 @@
 <p>결재대기에서는 [문서처리] 시 처리구분 유형으로 결재, 반려, 보류, 중단을 선택하여 처리하며, 선택할 수 있는 처리구분은 문서종류에 따라 다릅니다.</p>
 <ul>
 <li><strong>생산문서</strong> : 검토자와 결재자는 결재, 반려, 보류, 중단을 모두 선택할 수 있습니다.</li>
-<li><strong>수신문서</strong> : 반려, 보류, 중단을 선택할 수 없고 문서처리만 할 수 있습니다.</li>
+<li><strong>접수문서</strong> : 반려, 보류, 중단을 선택할 수 없고 문서처리만 할 수 있습니다.</li>
 </ul>
-<p>따라서 수신문서를 처리하는 경우에는 반려·보류·중단 버튼이 제공되지 않습니다.</p>
+<p>따라서 접수문서를 처리하는 경우에는 반려·보류·중단 버튼이 제공되지 않습니다.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">결재대기에 있는 문서는 어떻게 반려 하나요?</p>
@@ -2793,19 +2811,19 @@
 </div>
 <div class="admonition question">
 <p class="admonition-title">접수대기에서 [접수공문게시일 경우 LDAP 및 수기입력은 제외됩니다] 알림이 나오는데 어떻게 해야 하나요?</p>
-<p>접수대기에서 공문게시를 진행할 때 <strong>조직도</strong>, <strong>공용그룹</strong>, <strong>지역그룹</strong>, <strong>개인수신그룹</strong>으로 지정한 수신처만 공문게시 대상이 되고, <strong>행안부유통(LDAP)</strong>, <strong>문서24</strong>, <strong>수기입력</strong>으로 지정된 수신처는 공문게시할 수 없기 때문에 나타나는 알림입니다.</p>
+<p>접수대기에서 공문게시를 진행할 때 <strong>조직도</strong>로 지정한 수신처만 공문게시 대상이 되고, <strong>행안부유통(LDAP)</strong>, <strong>문서24</strong>, <strong>수기입력</strong>으로 지정된 수신처는 공문게시할 수 없기 때문에 나타나는 알림입니다. 다만 <strong>공용그룹</strong>, <strong>지역그룹</strong>, <strong>개인수신그룹</strong>으로 지정한 수신처라도 조직도에서 등록한 수신처라면 공문게시 대상에 포함됩니다.</p>
 <p>해당 문서의 수신처 중 위 세 가지 경로로 입력된 수신처가 있는지 확인하시기 바랍니다. 게시할 수 없는 수신처는 공문게시 대상에서 자동으로 제외되며, 나머지 수신처에 대한 공문게시는 정상적으로 진행됩니다.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">시도에서 보내주는 공문을 선별적인 사람들에게만 게시할 수 있나요?</p>
 <p>공문게시는 <strong>특정 사용자를 지정할 수 없으며 부서 단위로만 지정</strong>할 수 있습니다. 따라서 게시 대상을 부서보다 좁게 한정하는 것은 불가능합니다.</p>
-<p>수신처는 <strong>조직도</strong>, <strong>공용그룹</strong>, <strong>지역그룹</strong>, <strong>개인수신그룹</strong>으로 지정할 수 있으며, <strong>행안부유통(LDAP)</strong>, <strong>문서24</strong>, <strong>수기입력</strong>으로 지정한 수신처는 공문게시 대상에서 제외됩니다.</p>
+<p>수신처는 <strong>조직도</strong>로 지정한 경우에만 공문게시 대상이 되며, <strong>공용그룹</strong>, <strong>지역그룹</strong>, <strong>개인수신그룹</strong>으로 지정한 수신처라도 조직도에서 등록한 수신처라면 공문게시할 수 있습니다. <strong>행안부유통(LDAP)</strong>, <strong>문서24</strong>, <strong>수기입력</strong>으로 지정한 수신처는 공문게시 대상에서 제외됩니다.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">공문게시를 할 수 없는 문서는 어떤 문서인가요?</p>
 <p>아래 문서는 공문게시 대상에서 제외됩니다.</p>
 <ul>
-<li>수신도착 상태인 문서</li>
+<li>완료문서가 아닌 문서</li>
 <li>대국민공개여부가 <strong>비공개</strong> 또는 <strong>부분공개</strong>인 문서</li>
 <li>직원열람제한이 <strong>제한종료일</strong> 또는 <strong>영구</strong>로 설정된 문서</li>
 <li>비전자문서</li>
@@ -2924,14 +2942,14 @@
 <p class="admonition-title">비전자발송(이메일, 일반FAX) 방법 문의 드립니다.</p>
 <p>문서를 기안할 때 수신처를 지정하고 결재를 완료한 문서는 발송대기에서 조회할 수 있습니다.
 [문서관리 &gt; 발송함 &gt; 발송대기]에서 발송할 문서를 선택한 후 발송처리 버튼을 클릭하고 발송구분을 비전자발송으로 설정합니다.
-그 뒤 인편, 우편, 팩스, 이메일, 기타 중에서 이메일을 선택하고 확인을 누르면 발송처리 됩니다.
+그 뒤 인편, 우편, 일반FAX, 이메일, 기타 중에서 이메일을 선택하고 확인을 누르면 발송처리 됩니다.
 단, 비전자발송으로 설정한 수신처에는 전자적으로 발송되지 않으며 발송처리 후에 생성되는 시행문을 출력하거나 다운로드한 후 별도의 방법으로 직접 발송해야 합니다.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">수신처로 문서24 수신 기관과 수기입력 수신 기관을 함께 동시 발송처리할 수 있나요?</p>
 <p>기안문서 수신자지정 시 문서24와 수기입력하여 지정한 경우에는 발송처리 시 [전자 + 비전자발송]으로 발송처리 가능합니다.
 다만, 수기입력으로 지정한 수신처는 발송처리 시 실제로 발송되지 않으므로 발송처리 이후에 생성되는 시행문을 출력 또는 다운로드 하여
-별도의 수단(인편, 우편, 팩스, 이메일 등)으로 발송처리 해야 합니다.</p>
+별도의 수단(인편, 우편, 일반FAX, 이메일 등)으로 발송처리 해야 합니다.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">발송처리 시 [발신명의가 존재하지 않습니다] 오류가 나오는데 어떻게 해야 하나요?</p>
@@ -3069,7 +3087,6 @@
 <p class="admonition-title">보안공유를 하려면 어떤 권한이 필요한가요?</p>
 <p>보안공유를 지정할 수 있는 권한은 총괄관리자, 기관관리자(업무), 시도기록물담당자, 기관기록물담당자, 부서(학교)기록물담당자, 감사열람조직, 과제카드 관리자(왕관), 결재선입니다. 지정된 보안공유자는 열람제한 문서를 열람할 수 있으며, 보안공유받은문서 함에서 확인 가능합니다.</p>
 <p>보안공유는 [문서관리] &gt; [문서함] &gt; [문서등록대장], [문서관리] &gt; [내문서함] &gt; [기안한문서], [문서관리] &gt; [문서함] &gt; [부서인수문서]에서 문서를 선택한 후 상단의 [보안공유] 버튼을 클릭하여 지정합니다. 이를 통해 결재경로에 포함되지 않은 사용자도 해당 보안문서를 열람할 수 있습니다.</p>
-<p><strong>2026년 제2차 업무협의체 결정에 따라 보안공유를 지정할 수 있는 권한은 과제카드 관리자, 결재선으로 축소될 예정입니다.</strong></p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">과제카드 포함 인수인계를 완료해도 열람할 수 없는 문서가 있나요?</p>
@@ -3095,7 +3112,7 @@
 <p class="admonition-title">열람제한 문서의 보안 공유 방법은 과제카드 관리자(크라운)만 있나요?</p>
 <ul>
 <li>열람제한 문서 보안공유 지정 권한 : 총괄관리자, 기관관리자(업무), 시도기록물담당자, 기관기록물담당자, 부서(학교)기록물담당자, 감사열람조직, 과제카드 관리자(왕관), 결재선  </li>
-<li>열람제한 문서 열람권한 : 총괄관리자, 결재선(전체), 과제카드 관리자(왕관), 감사열람조직, 문서관리 감사담당자 권한, 공람자, 보안공유자, 부서장/학교장</li>
+<li>열람제한 문서 열람권한 : 시도총괄관리자(업무), 시도기록물담당자, 감사열람조직, 부서장/학교장, 기관장, 결재선, 과제카드 관리자(왕관), 공람자, 보안공유자</li>
 </ul>
 </div>
 <h2 id="_31">문서등록대장</h2>
@@ -3106,11 +3123,11 @@
 </div>
 <div class="admonition question">
 <p class="admonition-title">제목마스킹 기능을 사용하려면 어떻게 해야 하나요?</p>
-<p>제목마스킹은 <strong>문서 기안 시 제목 입력란에서 [제목마스킹] 옵션을 선택</strong>하면 적용됩니다. 저장하면 해당 문서의 제목이 마스킹 처리되어 표시·공개됩니다. 결재 완료 후에는 기안자가 문서등록대장에서만 마스킹 가능합니다. 단, 제목 마스킹 사용 여부는 교육청 총괄운영자가 문서환경설정에서 활성화해야 메뉴가 노출됩니다.</p>
+<p>제목마스킹은 <strong>문서 기안 시 문서관리카드 상단의 [마스킹] 버튼을 클릭한 뒤 마스킹하려는 단어에 직접 <code>*</code>을 입력</strong>하면 적용됩니다. 저장하면 해당 문서의 제목이 마스킹 처리되어 표시·공개됩니다. 결재 완료 후에는 당해연도 생산문서에 한해 기안자 또는 처리과문서담당자가 문서등록대장에서 마스킹할 수 있습니다. 단, 제목 마스킹 사용 여부는 교육청 총괄운영자가 문서환경설정에서 활성화해야 메뉴가 노출됩니다.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">문서등록대장에서 수신자 숨김 기능이 적용 가능한 기준에 대해 알려주세요.</p>
-<p>수신자 숨김은 수기입력한 민원인 수신자만 적용할 수 있습니다. 또한 해당 문서의 기안자이거나 처리과문서담당자 권한을 가진 사용자만 설정 및 취소할 수 있습니다. 적용 시 권한자는 원본을 보지만, 비권한자는 숨김(<em>*</em> 표시)으로 보게 됩니다.</p>
+<p>수신자 숨김은 수기입력한 민원인 수신자만 적용할 수 있습니다. 또한 해당 문서의 기안자이거나 처리과문서담당자 권한을 가진 사용자만 설정 및 취소할 수 있습니다. 적용 시 권한자는 원본을 보지만, 비권한자는 숨김(<code>*****</code> 표시)으로 보게 됩니다.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">문서등록대장의 제목마스킹, 수신자숨김 처리를 취소할 수 있는 기능이 있나요?</p>
@@ -3122,11 +3139,11 @@
 </div>
 <div class="admonition question">
 <p class="admonition-title">전임자가 설정한 열람제한문서를 열람할 수 있는 방법이 있나요?</p>
-<p>보안공유없이 열람제한문서를 열람 가능한 사용자는 총괄관리자, 기관관리자, 감사담당자, 감사담당자(감사열람조직), 부서장/학교장, 결재선, 과제카드관리자, 보안공유자, 공람자, 시도/기관기록물담당자입니다.</p>
+<p>보안공유 없이 열람제한문서를 열람할 수 있는 사용자는 시도총괄관리자(업무), 시도기록물담당자, 감사열람조직, 부서장/학교장, 기관장, 결재선, 과제카드 관리자(왕관), 공람자, 보안공유자입니다.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">부서장 권한의 사용자가 하위 부서의 모든 문서를 열람할 수 있나요?</p>
-<p>부서장 권한은 하위 부서의 모든 문서를 열람할 수 있습니다.</p>
+<p>부서장 권한은 하위 부서의 문서를 열람할 수 있습니다. 단, 본인 부서를 제외하면 열람제한 문서는 열람할 수 없습니다.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">열람제한문서의 열람이력을 확인할 수 있나요?</p>
@@ -3172,8 +3189,10 @@
 <div class="admonition question">
 <p class="admonition-title">첨부파일 다운로드 시 생성되는 파일명의 기준에 대해 알려주세요.</p>
 <p>첨부파일 다운로드 시 파일명은 문서 유형에 따라 다르게 생성됩니다.</p>
-<p>생산문서: (문서번호) 문서제목, 문서제목 [문서번호], 문서제목 (문서번호) 형식</p>
-<p>접수문서: (문서번호 발신기관명) 문서제목, 발신기관명 문서제목 [문서번호], 발신기관명 문서제목 (문서번호) 형식으로 생성됩니다.</p>
+<ul>
+<li>생산문서: (문서번호(본문)) 문서의제목, 문서의제목 [문서번호 (본문)], 문서의제목 (문서번호 (본문))</li>
+<li>접수문서: (문서번호 (본문) 발신기관명) 문서의제목, 발신기관명 문서의제목 [문서번호 (본문)], 발신기관명 문서의제목 (문서번호 (본문))</li>
+</ul>
 </div>
 <div class="admonition question">
 <p class="admonition-title">결재가 완료된 문서의 결재취소가 가능한가요?</p>
@@ -3260,7 +3279,7 @@
 </div>
 <div class="admonition question">
 <p class="admonition-title">비전자문서를 접수한 뒤 담당자가 완료 처리하면 첨부 수정이나 삭제가 가능한가요?</p>
-<p>접수대기에서 등록한 접수 비전자문서의 경우 수정, 삭제가 불가능합니다.</p>
+<p>접수대기에서 등록한 접수 비전자문서는 접수 처리된 이후에는 수정, 삭제가 불가능합니다. 접수 처리 전 대외도착 또는 수신도착 상태일 때는 수정 또는 삭제할 수 있습니다.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">최종결재자가 완료하면 문서는 회수되지 않는 것으로 알고 있습니다. 최종결재 후에도 회수되는 기능이 있으면 좋겠습니다. 기능 개선이 안 될까요?</p>
@@ -3620,19 +3639,21 @@
     
       <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
-        <script src="https://unpkg.com/lunr/lunr.js"></script>
+        <script src="../javascripts/lunr.js"></script>
       
-        <script src="https://unpkg.com/lunr-languages/lunr.stemmer.support.js"></script>
+        <script src="../javascripts/lunr.stemmer.support.js"></script>
       
-        <script src="https://unpkg.com/lunr-languages/tinyseg.js"></script>
+        <script src="../javascripts/tinyseg.js"></script>
       
-        <script src="https://unpkg.com/lunr-languages/lunr.ko.js"></script>
+        <script src="../javascripts/lunr.ko.js"></script>
       
-        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+        <script src="../javascripts/tablesort.min.js"></script>
       
         <script src="../javascripts/tablesort.js"></script>
       
         <script src="../javascripts/copy.js"></script>
+      
+        <script src="../javascripts/mermaid.min.js"></script>
       
     
   </body>

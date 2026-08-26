@@ -35,7 +35,7 @@ description: 개인정보필터의 검출 항목과 문서관리카드, 한건�
 이 기능은 시도교육청의 문서환경설정 (1)에서 '한건수정, 일괄수정 개인정보필터 사용여부'를 설정한 경우에만 제공되므로, 소속 교육청의 설정에 따라 화면에 표시되지 않을 수 있습니다.
 { .annotate }
 
-1.  :man_raising_hand: :material-sitemap-outline: 서비스공통 → 포털관리 → 운영환경관리 → 문서환경설정
+1.  :material-information-outline: :material-sitemap-outline: 서비스공통 → 포털관리 → 운영환경관리 → 문서환경설정
 
 !!! Info "문서관리카드 내 개인정보필터와의 차이"
     - 문서관리카드 : 대국민공개여부와 관계없이 본문과 첨부파일의 개인정보 검출
@@ -44,7 +44,7 @@ description: 개인정보필터의 검출 항목과 문서관리카드, 한건�
 한건수정, 일괄수정 기능을 제공하는 모든 문서함 (1)에서 동일하게 사용할 수 있습니다.
 { .annotate }
 
-1.  :man_raising_hand: :material-sitemap-outline: 적용 화면
+1.  :material-information-outline: :material-sitemap-outline: 적용 화면
     - 업무관리 → 문서관리 → 문서함 → 문서등록대장
     - 업무관리 → 문서관리 → 문서함 → 부서인수문서
     - 업무관리 → 문서관리 → 내문서함 → 기안한문서

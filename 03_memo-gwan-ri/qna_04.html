@@ -39,16 +39,10 @@
     
     
       
-        <script src="https://unpkg.com/iframe-worker/shim"></script>
+        <script src="../javascripts/iframe-worker.js"></script>
       
     
     
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Noto Sans KR";--md-code-font:"Fira Code"}</style>
       
     
     
@@ -640,6 +634,8 @@
       
         
       
+        
+      
     
     
       
@@ -958,6 +954,28 @@
   
   <span class="md-ellipsis">
     내부메일
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09_service-common/qna_10.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    서비스공통
     
   </span>
   
@@ -1867,7 +1885,11 @@
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16v-3c0-1.11-.89-2-2-2h-6V8h2V2H9v6h2v3H5c-1.11 0-2 .89-2 2v3H1v6h6v-6H5v-3h6v3H9v6h6v-6h-2v-3h6v3h-2v6h6v-6zM11 4h2v2h-2zM5 20H3v-2h2zm8 0h-2v-2h2zm8 0h-2v-2h2z"/></svg></span> 메모관리 → 보고한메모</p>
 <div class="admonition question">
 <p class="admonition-title">작성한 메모를 회수하고 싶은데, 어떤 경우에 회수가 불가능한가요?</p>
-<p>작성한 메모는 수신자가 열람했거나 의견이 등록된 경우에는 회수가 불가능하며, 수신자가 아직 열람하지 않았고 의견도 없는 상태일 때만 회수할 수 있습니다.</p>
+<ul>
+<li>수신자가 아무도 열람하지 않았고 의견도 등록되지 않은 상태에서는 <strong>전체 회수</strong>가 가능합니다.</li>
+<li>일부 수신자만 열람한 상태에서는 미열람 수신자에 한해 <strong>부분 회수</strong>가 가능합니다. 부분 회수를 하면 해당 메모의 수신자 목록에서 미열람 수신자가 제외되고, 동일한 내용의 메모가 <code>[임시저장메모]</code>에 <strong>구분: 부분회수</strong>로 생성됩니다.</li>
+<li>수신자가 의견을 등록했거나 모든 수신자가 메모를 열람한 경우에는 부분 회수를 포함하여 회수가 불가능합니다.</li>
+</ul>
 </div>
 <div class="admonition question">
 <p class="admonition-title">보고한 메모를 삭제하거나 다른 메일함으로 이동할 수 있나요?</p>
@@ -1887,9 +1909,10 @@
 <div class="admonition question">
 <p class="admonition-title">메모를 보고한 후 과제카드를 지정·변경하는 방법과 지정되지 않는 원인은 무엇인가요?</p>
 <ul>
-<li>수신자의 열람 여부에 따라 처리 방법이 다름.</li>
-<li><strong>수신자 미열람 상태</strong>: <code>[보고한메모]</code> 목록에서 해당 메모를 선택하여 <strong><code>[회수]</code></strong> 처리 가능. 회수 후 <code>[임시저장메모]</code> 화면에서 과제카드를 지정하여 다시 보고해야 함.</li>
-<li><strong>수신자 열람 상태</strong>: 수신자가 한 명이라도 메모를 확인하여 메모 번호가 채번된 이후에는 회수 및 수정이 불가능하므로 과제카드 지정·변경이 불가함.</li>
+<li>메모 번호가 채번된 메모에 과제카드를 지정하는 방법은 제공되지 않습니다. 따라서 메모를 회수한 뒤 과제카드를 지정하여 다시 보고해야 합니다.</li>
+<li><strong>수신자 미열람 상태</strong>: <code>[보고한메모]</code> 목록에서 해당 메모를 선택하여 <strong><code>[회수]</code></strong> 처리 가능. 회수 후 <code>[임시저장메모]</code> 화면에서 과제카드를 지정하여 다시 보고함.</li>
+<li><strong>일부 수신자 열람 상태</strong>: 미열람 수신자에 한해 부분 회수됨. 이때 <code>[임시저장메모]</code>에 <strong>구분: 부분회수</strong>로 생성되는 메모는 미열람 수신자를 대상으로 새로 만들어진 메모이며, 이미 열람한 수신자의 원 메모와는 별개로 존재함. 이 메모에 과제카드를 지정하여 보고하더라도 원 메모에 과제카드가 지정되는 것은 아님.</li>
+<li><strong>전체 수신자 열람 상태 또는 의견 등록</strong>: 회수 및 수정이 불가능하므로 과제카드 지정·변경이 불가함.</li>
 </ul>
 </div>
 <div class="admonition question">
@@ -2122,19 +2145,21 @@
     
       <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
-        <script src="https://unpkg.com/lunr/lunr.js"></script>
+        <script src="../javascripts/lunr.js"></script>
       
-        <script src="https://unpkg.com/lunr-languages/lunr.stemmer.support.js"></script>
+        <script src="../javascripts/lunr.stemmer.support.js"></script>
       
-        <script src="https://unpkg.com/lunr-languages/tinyseg.js"></script>
+        <script src="../javascripts/tinyseg.js"></script>
       
-        <script src="https://unpkg.com/lunr-languages/lunr.ko.js"></script>
+        <script src="../javascripts/lunr.ko.js"></script>
       
-        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+        <script src="../javascripts/tablesort.min.js"></script>
       
         <script src="../javascripts/tablesort.js"></script>
       
         <script src="../javascripts/copy.js"></script>
+      
+        <script src="../javascripts/mermaid.min.js"></script>
       
     
   </body>

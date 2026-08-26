@@ -39,16 +39,10 @@
     
     
       
-        <script src="https://unpkg.com/iframe-worker/shim"></script>
+        <script src="../javascripts/iframe-worker.js"></script>
       
     
     
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Noto Sans KR";--md-code-font:"Fira Code"}</style>
       
     
     
@@ -2130,7 +2124,7 @@
 </ul>
 </details>
 <h2 id="_7">과제카드관리</h2>
-<h3 id="_8"><img alt="📎" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4ce.svg" title=":paperclip:" /> 과제카드함</h3>
+<h3 id="_8"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z"/></svg></span> 과제카드함</h3>
 <p><strong>과제카드함</strong>은 부서나 기관의 모든 과제카드 목록을 조회하고, 신규 과제카드를 등록하거나 종료하는 등 과제카드를 종합적으로 관리하는 화면입니다.
 이 메뉴는 주로 부서(학교)과제카드담당자, 기관과제카드담당자, 시도과제카드담당자와 같은 관리 권한을 가진 사용자가 사용합니다.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:6"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><input id="__tabbed_2_6" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">과제카드 목록 조회 및 관리</label><label for="__tabbed_2_2">과제카드 등록</label><label for="__tabbed_2_3">과제카드 일괄 등록</label><label for="__tabbed_2_4">담당자 일괄 처리/삭제</label><label for="__tabbed_2_5">과제카드 종료 승인/승인취소</label><label for="__tabbed_2_6">과제카드 삭제</label></div>
@@ -2209,7 +2203,7 @@
 </div>
 </div>
 </div>
-<h3 id="_9"><img alt="📎" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4ce.svg" title=":paperclip:" /> 과제카드변경</h3>
+<h3 id="_9"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z"/></svg></span> 과제카드변경</h3>
 <p><strong>과제카드변경</strong>은 부서의 과제카드 전체 목록을 대상으로 업무 실적에 연결된 과제카드를 다른 과제카드로 변경(재편철)하는 기능입니다.
 이 메뉴는 주로 부서(학교)과제카드담당자, 기관과제카드담당자, 시도과제카드담당자 등 관리 권한을 가진 사용자가 활용합니다.</p>
 <p>잘못된 과제카드에 실적을 편철했거나 업무 변경으로 인해 실적을 다른 과제카드로 옮겨야 할 경우 이 메뉴를 사용합니다.
@@ -2243,12 +2237,12 @@
 <tr>
 <td>과제카드변경 메뉴</td>
 <td>소속 부서(학교)에 등록된 모든 과제카드 목록</td>
-<td>부서(학교)·기관·시도과제카드담당자, 과제카드승인담당자</td>
+<td>부서(학교)·기관·시도과제카드담당자</td>
 </tr>
 </tbody>
 </table>
 </details>
-<h3 id="_10"><img alt="📎" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4ce.svg" title=":paperclip:" /> 과제카드인계</h3>
+<h3 id="_10"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z"/></svg></span> 과제카드인계</h3>
 <p><strong>과제카드인계</strong>는 더 이상 사용하지 않거나 다른 부서의 업무가 되어 타 부서로 넘겨야 하는 과제카드를 전자적으로 인계하는 기능입니다.
 이 기능은 주로 부서(학교)과제카드담당자, 기관과제카드담당자, 시도과제카드담당자와 같은 관리 권한을 가진 사용자가 수행합니다.</p>
 <p>과제카드 인계인수 절차는 인계 부서의 ①인계 등록 → ②인계 요청과 인수 부서의 ③접수 처리 → ④이관 처리 순서로 진행되며, 각 단계별로 취소 기능이 제공됩니다.
@@ -2277,7 +2271,7 @@
 <li>반려 사유 확인: 진행 상태가 인수반려인 경우, 상태를 클릭하면 목록 하단에 반려된 사유 표시됨</li>
 </ul>
 </details>
-<h3 id="_11"><img alt="📎" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4ce.svg" title=":paperclip:" /> 과제카드인수</h3>
+<h3 id="_11"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z"/></svg></span> 과제카드인수</h3>
 <p><strong>과제카드인수</strong>는 다른 부서에서 인계 요청한 과제카드를 인수 부서에서 접수하고, 해당 과제카드에 편철된 실적들을 새로운 과제카드 또는 기존 과제카드로 이관하여 인계인수 절차를 최종 마무리하는 화면입니다.
 이 기능은 주로 부서(학교)과제카드담당자, 기관과제카드담당자, 시도과제카드담당자와 같은 관리 권한을 가진 사용자가 수행합니다.</p>
 <p>전체적인 과제카드 인계인수 절차는 인계 부서의 인계 등록과 인계 요청 이후, 인수 부서의 접수와 이관 단계를 거쳐 완료됩니다.</p>
@@ -2320,7 +2314,7 @@
 <li>목록 조회 및 출력: 인수 목록을 조회하고 엑셀 파일로 다운로드하거나 인쇄 가능      </li>
 </ul>
 </details>
-<h3 id="_12"><img alt="📎" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4ce.svg" title=":paperclip:" /> 과제카드승인함</h3>
+<h3 id="_12"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z"/></svg></span> 과제카드승인함</h3>
 <p><strong>과제카드승인함</strong>은 부서나 학교의 과제카드 담당자가 등록 요청한 신규 과제카드를 최종적으로 검토하여 승인하거나 반려하는 화면입니다.
 이 메뉴는 과제카드승인담당자 또는 시도과제카드담당자 권한을 가진 사용자만 접근하고 처리할 수 있습니다.</p>
 <p>과제카드는 등록 요청 후, 이 화면에서 승인권자의 승인을 받아야만 실제 업무에 사용할 수 있습니다.
@@ -2338,7 +2332,7 @@
 </ul>
 </details>
 <h2 id="_13">과제추진현황</h2>
-<h3 id="_14"><img alt="📎" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4ce.svg" title=":paperclip:" /> 단위과제추진현황</h3>
+<h3 id="_14"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z"/></svg></span> 단위과제추진현황</h3>
 <p><strong>단위과제추진현황</strong> 화면은 단위과제카드별 실적 현황과 예산 정보를 조직별로 조회하는 기능입니다.
 이 메뉴는 일반 사용자가 아닌 <strong>부서(학교)과제카드담당자, 기관과제카드담당자, 시도과제카드담당자</strong>와 같은 관리 권한을 가진 사용자를 위한 화면입니다.</p>
 <details class="info">
@@ -2350,7 +2344,7 @@
 <li>인쇄: 조회된 현황 정보를 인쇄하는 기능을 제공</li>
 </ul>
 </details>
-<h3 id="_15"><img alt="📎" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4ce.svg" title=":paperclip:" /> 관리과제추진현황</h3>
+<h3 id="_15"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z"/></svg></span> 관리과제추진현황</h3>
 <p><strong>관리과제추진현황</strong>은 관리과제카드별 실적 현황과 계획관리의 진척율을 조직별로 조회하는 화면입니다.
 이 메뉴는 일반 사용자가 아닌 <strong>부서(학교)과제카드담당자, 기관과제카드담당자, 시도과제카드담당자</strong>와 같은 관리 권한을 가진 사용자를 위한 기능입니다.
 사용자는 조직도에서 특정 조직을 선택하여 해당 조직의 관리과제카드에 대한 실적 현황과 계획의 진척도를 확인할 수 있습니다.</p>
@@ -2364,17 +2358,17 @@
 </ul>
 </details>
 <h2 id="_16">과제통계현황</h2>
-<h3 id="_17"><img alt="📎" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4ce.svg" title=":paperclip:" /> 과제실적현황</h3>
+<h3 id="_17"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z"/></svg></span> 과제실적현황</h3>
 <p><strong>과제실적현황</strong>은 개인별 또는 부서별로 실적 집계 현황을 확인하는 화면입니다.
 이 메뉴는 주로 <strong>부서(학교)과제카드담당자, 기관과제카드담당자, 시도과제카드담당자</strong>와 같은 관리 권한을 가진 사용자가 사용합니다.</p>
 <p>사용자는 조회 조건을 선택하고 조회 버튼을 클릭하여 조건에 맞는 실적 현황을 보고서 형태로 확인 가능합니다.
 또한, 개인별 또는 부서별로 실적 구분에 따라 집계하여 조회할 수 있습니다.</p>
-<h3 id="_18"><img alt="📎" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4ce.svg" title=":paperclip:" /> 과제카드현황</h3>
+<h3 id="_18"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z"/></svg></span> 과제카드현황</h3>
 <p><strong>과제카드현황</strong>은 부서별로 과제카드의 현황을 확인하는 화면입니다.
 이 메뉴는 주로 <strong>부서(학교)과제카드담당자, 기관과제카드담당자, 시도과제카드담당자</strong>와 같은 관리 권한을 가진 사용자가 사용합니다.</p>
 <p>부서별로 과제카드 현황 조회가 가능하며, 상세 조건을 설정하여 특정 조건에 맞는 과제카드 현황 조회됩니다.
 조회 조건을 선택한 후 조회 버튼을 클릭하면 조건에 맞는 과제카드 현황을 보고서 형태로 확인 가능합니다.</p>
-<h3 id="_19"><img alt="📎" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4ce.svg" title=":paperclip:" /> 활용현황점검표</h3>
+<h3 id="_19"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z"/></svg></span> 활용현황점검표</h3>
 <p><strong>활용현황점검표</strong>는 과제관리 시스템의 다양한 기능들의 활용 현황을 종합적으로 조회하고 점검하는 화면입니다.</p>
 <p>과제분류, 과제카드, 문서관리카드, 메모, 일정, 일지, 지시사항 등 주요 기능들의 활용 현황을 상세하게 조회 가능합니다.
 그리고, 조회된 활용 현황 점검표를 인쇄하여 보고 자료 등으로 활용할 수 있습니다.</p>
@@ -2382,7 +2376,9 @@
 <p><strong>업무인계인수</strong>는 조직 개편, 인사발령, 업무분장 조정 등의 사유로 담당자가 변경될 때, 전임자와 후임자가 전자적으로 업무에 관한 모든 사항을 인계하고 인수할 수 있도록 지원하는 기능입니다.
 이 기능을 통해 사용자는 별도의 추가 권한 없이 업무 인계인수 절차를 처리할 수 있습니다.</p>
 <p>업무인계인수는 <strong>인계자</strong>(업무를 넘겨주는 사람), <strong>인수자</strong>(업무를 받는 사람), <strong>입회자</strong>(인계를 확인하는 상급자) 세 명의 역할로 구성됩니다.
-전체적인 업무 절차는 ① 인계인수서 작성(인계 신청) → ② 인수 요청 → ③ 인수 확인 → ④ 입회 확인 순서로 진행됩니다.
+역할을 기준으로 보면 인계자의 <strong>인계신청</strong>, 인수자의 <strong>인수확인</strong>, 입회자의 <strong>입회확인</strong> 3단계로 구분됩니다.
+전체 처리흐름을 기준으로 보면 ① 인계인수서 작성 → ② 인수요청 → ③ 인수완료(입회요청) → ④ 입회확인 → ⑤ 최종완료 5단계로 구분됩니다.
+인계인수서 작성과 인수요청은 인계자가, 인수완료는 인수자가, 입회확인은 입회자가 수행하며, 인수자가 인수완료 처리하면 인계인수서의 상태가 입회요청으로 변경됩니다.
 입회확인까지 끝난 건은 <strong>적용일자(발령일자) 도래</strong>와 <strong>인수자가 인계자 부서로 이동</strong>이 모두 충족되면 다음 날 새벽 1시 배치를 통해 자동으로 최종완료 처리됩니다.</p>
 <details class="info">
 <summary>업무인계인수 인계 대상 항목</summary>
@@ -2402,7 +2398,7 @@
 <li>
 <p class="annotate">인계 대상 문서의 공람(보안공유) 처리는 수행되지 않음 (1)</p>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> 배치를 통한 자동 처리 시에는 인계 대상 문서의 공람(보안공유)까지 함께 처리되나, 처리 시간이 길어지는 것을 방지하기 위해 최종완료 기능에서는 제외</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg></span> 배치를 통한 자동 처리 시에는 인계 대상 문서의 공람(보안공유)까지 함께 처리되나, 처리 시간이 길어지는 것을 방지하기 위해 최종완료 기능에서는 제외</li>
 </ol>
 </li>
 <li>
@@ -2453,7 +2449,7 @@
 </div>
 <h3 id="_23"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 64a64 64 0 1 1 128 0 64 64 0 1 1-128 0M25.9 233.4C29.3 191.9 64 160 105.6 160h44.8c27 0 51 13.4 65.5 34.1q-4.05 2.85-7.5 6.3l-64 64c-21.9 21.9-21.9 57.3 0 79.2l47.6 47.6V464c0 26.5-21.5 48-48 48h-32c-26.5 0-48-21.5-48-48V348.3c-26.5-9.5-44.7-35.8-42.2-65.6zM448 64a64 64 0 1 1 128 0 64 64 0 1 1-128 0m-16.4 136.4c-2.3-2.3-4.9-4.4-7.5-6.3 14.5-20.7 38.6-34.1 65.5-34.1h44.8c41.6 0 76.3 31.9 79.7 73.4l4.1 49.3c2.5 29.8-15.7 56.1-42.2 65.6V464c0 26.5-21.5 48-48 48h-32c-26.5 0-48-21.5-48-48v-72.8l47.6-47.6c21.9-21.9 21.9-57.3 0-79.2zM272 240v32h96v-32c0-9.7 5.8-18.5 14.8-22.2s19.3-1.7 26.2 5.2l64 64c9.4 9.4 9.4 24.6 0 33.9l-64 64c-6.9 6.9-17.2 8.9-26.2 5.2S368 377.6 368 367.9v-32h-96v32c0 9.7-5.8 18.5-14.8 22.2s-19.3 1.7-26.2-5.2l-64-64c-9.4-9.4-9.4-24.6 0-33.9l64-64c6.9-6.9 17.2-8.9 26.2-5.2S272 230.3 272 240"/></svg></span> 입회함</h3>
 <p><strong>입회함</strong>은 입회자가 인계자와 인수자의 업무인계인수 내역을 최종적으로 확인하고 승인(입회확인)하거나 반려하는 화면입니다.
-업무인계인수 절차는 '인계 신청 → 인수 확인 → 입회 확인' 순서로 진행되므로, 입회함은 이 절차의 마지막 단계를 수행하는 공간입니다.</p>
+업무인계인수는 역할을 기준으로 인계자의 인계신청 → 인수자의 인수확인 → 입회자의 입회확인 순서로 진행되므로, 입회함은 이 절차의 마지막 단계를 수행하는 공간입니다.</p>
 <p>입회자는 인계인수 과정을 확인하는 상급자를 의미하며, 통상적으로 인계자의 바로 위 상급자로 지정합니다.
 만약 인계자가 기관장이나 부기관장일 경우에는 바로 아래 하급자가 입회자가 됩니다.</p>
 <div class="admonition tip">
@@ -2524,7 +2520,7 @@
 <dt><code>부서(학교)과제카드담당자</code></dt>
 <dd>소속 부서(학교)의 과제카드 전반을 관리. 과제카드 신규 등록 요청, 종료 요청 승인, 과제카드 인계인수 처리, 담당자 지정 등의 업무를 수행</dd>
 <dt><code>과제카드승인담당자</code></dt>
-<dd>부서(학교)에서 등록 요청한 신규 과제카드를 최종 검토하여 승인하거나 반려함. 학교는 자체 승인 권한이 없어 관할 교육(지원)청의 담당자가 이 역할을 수행함</dd>
+<dd>부서(학교)에서 등록 요청한 신규 과제카드를 최종 검토하여 승인하거나 반려함. 과제카드승인함 화면에서 등록승인 또는 등록반려로 처리하며, 학교는 자체 승인 권한이 없어 관할 교육(지원)청의 담당자가 이 역할을 수행함</dd>
 <dt><code>시도과제카드담당자</code></dt>
 <dd>시도 교육청 단위의 과제관리 총괄 담당자 중 하나로, 과제카드 등록 승인, 완료된 과제카드 이관 취소, 과제카드 변경 기간 설정 등 시스템의 주요 정책을 관리</dd>
 <dt><code>부서(학교)업무인계인수담당자</code></dt>
@@ -2698,19 +2694,21 @@
     
       <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
-        <script src="https://unpkg.com/lunr/lunr.js"></script>
+        <script src="../javascripts/lunr.js"></script>
       
-        <script src="https://unpkg.com/lunr-languages/lunr.stemmer.support.js"></script>
+        <script src="../javascripts/lunr.stemmer.support.js"></script>
       
-        <script src="https://unpkg.com/lunr-languages/tinyseg.js"></script>
+        <script src="../javascripts/tinyseg.js"></script>
       
-        <script src="https://unpkg.com/lunr-languages/lunr.ko.js"></script>
+        <script src="../javascripts/lunr.ko.js"></script>
       
-        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+        <script src="../javascripts/tablesort.min.js"></script>
       
         <script src="../javascripts/tablesort.js"></script>
       
         <script src="../javascripts/copy.js"></script>
+      
+        <script src="../javascripts/mermaid.min.js"></script>
       
     
   </body>
